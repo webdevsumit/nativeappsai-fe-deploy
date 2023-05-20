@@ -45,7 +45,7 @@ export async function loader() {
     // if(!isAuthenticated){
     //     localStorage.setItem('afterAuthRedirectUrl', window.location.pathname);
     // }
-    // return redirect('/login');
+    return redirect('/landing');
 }
 
 function Auth() {
