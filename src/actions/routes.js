@@ -25,11 +25,13 @@ import { loader as authLoader } from "../components/Auth";
 
 // import GlobalLoader from './../components/commons/GlobalLoader'
 import Landing from "./../pages/Landing"
+import TermsAndConditions from "./../pages/TermsAndConditions"
 // import Signup from './../pages/Signup';
 import Error404Page from './../components/Error404Page'
 // import Login from './../pages/Login';
 // import ForgotPassword from './../pages/ForgotPassword';
 import Auth from "../components/Auth";
+import PricacyPolicy from "../pages/PricacyPolicy";
 // import AllExploredStores from "../components/AllExploredStores";
 // import StoreAuth from "../components/StoreAuth";
 // import Explore from "../components/Explore";
@@ -290,6 +292,14 @@ export const router = createBrowserRouter([
     {
         path: "/customer-service",
         element: <h6>Customer Care</h6>,
+    },
+    {
+        path: "/termsAndConditions",
+        element: <TermsAndConditions />,
+    },
+    {
+        path: "/privacyPolicy",
+        element: <PricacyPolicy />,
     },
     // {
     //     path: "/signup",

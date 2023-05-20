@@ -72,6 +72,7 @@
   margin-top: 0;
   margin-bottom: 5px;
   color: rgb(234, 234, 234);
+  font-weight: 600;
 }
 
 .Landing-services{
@@ -90,7 +91,7 @@
 .Landing-services-div-card{
   width: 400px;
   max-width: 100%;
-  height: 300px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -102,6 +103,11 @@
   margin-bottom: 15px;
 }
 
+.Landing-services-div-card-inner>h5{
+  margin: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 /* .Landing-services-div-card>h3{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 } */
@@ -110,8 +116,47 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.Landing-pricing-div-card-center{
+  background: linear-gradient(to left, #5533FF 0%, #27D6F5 100%);
+}
+
+#landing-contacts{
+  padding-top: 100px;
+}
+
+.landing-contacts>h1{
+  color: black;
+}
+
+.landing-contacts{
+  padding-top: 0;
+  /* background-color: #5533FF; */
+  /* background: linear-gradient(to right, #5533FF 0%, #27D6F5 100%) */
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+
+.Landing-contacts-div{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.Landing-contacts-div>a{
+  /* text-decoration: none; */
+  font-weight: 600;
+  font-size: 18px;
+  color: black;
+}
+
+.Landing-pricing-div-card{
+  height: 300px;
+}
+
 @media only screen and (max-width: 700px) {
   .Landing-firstDiv{
     padding-bottom: 200px;
+  }
+  .Landing-pricing-div-card-center{
+    background: linear-gradient(to top, #5533FF 0%, #27D6F5 100%);
   }
 }
