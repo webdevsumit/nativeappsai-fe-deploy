@@ -1,127 +1,117 @@
 .Landing{
+  /* display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; */
+  min-height: 200vh;
+}
+
+.Landing-nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: linear-gradient(to right, #5533FF 0%, #27D6F5 100%);
+}
+.Landing-nav>a, .Landing-navlinks>a{
+  text-decoration: none;
+}
+
+.Landing-navHead{
+  color: white;
+  margin: 10px;
+}
+
+.Landing-navlinks{
+ display: flex;
+}
+
+.Landing-navLink{
+  color: white;
+  margin: 10px;
+}
+
+.Landing-services{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Landing-firstDiv{
+  min-height: 60vh;
+  background: linear-gradient(to right, #5533FF 0%, #27D6F5 100%);
+  /* background: linear-gradient(to right, #7EEBFF 0%, #5533FF 100%); */
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+  display: flex;
+  /* justify-content: flex-end; */
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.Landing-hero-image{
+  max-width: 100%;
+  width: 530px;
+  /* height: 400px; */
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.Landing-hero-div{
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+.Landing-hero-div>h1{
+  color: white;
+}
+
+.Landing-hero-div>h3{
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: rgb(234, 234, 234);
+}
+
+.Landing-services{
+  padding-top: 100px;
+}
+
+.Landing-services-div{
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.Landing-services-div-card{
+  width: 400px;
+  max-width: 100%;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
-  min-height: 100vh;
+  border: 1px solid rgba(0, 0, 0, 0);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-bottom: 15px;
 }
 
-.Landing-head {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* max-width: 100%;
-  min-height: 100vh; */
-  background: transparent;
-  /* position: absolute; */
-  /* top: 0; */
-  /* left: 0; */
-  color: white;
-  font-size: 20px;
-  flex-direction: column;
-  /* margin: 0; */
-  /* overflow-y: scroll; */
-  overflow-x: hidden;
-  /* padding-top: 12vh; */
-}
+/* .Landing-services-div-card>h3{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+} */
 
-.Landing-head > h4 {
-  /* background-color: #0c0d13; */
-  padding: 10px;
-  border-radius: 8px;
-  text-align: center;
-  margin: 0;
-  font-family: monospace;
-}
-
-.Landing-head > h2 {
-  /* background-color: #0c0d13; */
-  /* padding: 10px; */
-  border-radius: 8px;
-  text-align: center;
-  margin: 0;
-  font-family: monospace;
-}
-
-.Landing-logo {
-  max-width: 300px;
-  width: 100%;
-}
-
-.Landing-button-div {
-  /* position: relative;
-  top: 100px; */
-  max-width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.Landing-text-animation {
-  position: relative;
-  top: 0px;
+.Landing-services-div-card>p{
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 @media only screen and (max-width: 700px) {
-  .Landing-text-animation {
-    transform: scale(0.7);
-    top: -15px;
+  .Landing-firstDiv{
+    padding-bottom: 200px;
   }
-  .FancyTextMessage_Iam > p {
-    margin-top: 0;
-    margin-bottom: 0;
-    display: none;
-  }
-  .FancyTextMessage_Iam > .innerIam {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-}
-
-.Landing-nav {
-  max-width: 100%;
-  position: fixed;
-  right: 0;
-  top: 0;
-  left: 0;
-  z-index: 11;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.Landing-nav-login {
-  transform: scale(0.6) translateY(8px);
-}
-
-.Landing-nav-btn > a {
-  color: white;
-  margin-left: 30px;
-  font-size: 1rem;
-}
-
-.Landing-features{
-  color: white;
-  margin: 20px;
-}
-
-.Landing-pricing{
-  color: white;
-  margin: 20px;
-}
-
-.Landing-language-select{
-  background: transparent;
-  color: white;
-  border: none;
-  border-bottom: 2px solid white;
-  text-align: center;
-  padding: 10px 0px;
-  outline: none;
-}
-
-.Landing-language-select>option{
-  color: black;
 }
