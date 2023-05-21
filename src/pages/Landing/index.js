@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { } from 'react'
 // import { Link } from 'react-router-dom';
 import './style.css';
 import { Link } from 'react-router-dom';
@@ -23,7 +23,7 @@ function Landing() {
                     </a>
                 </div>
             </nav>
-            <man>
+            <main>
                 <section id='landing-hero'>
                     <div className='Landing-firstDiv'>
                         <img className='Landing-hero-image' src='/assets/pngs/shoponlive-hero.png' alt='hero' />
@@ -42,7 +42,7 @@ function Landing() {
                         <div className='Landing-services-div'>
                             <div className='Landing-services-div-card'>
                                 <h3>Video Call Shopping</h3>
-                                <p>People can Schedule Google meet and do video call to you through our app "ShopOnLive" and can buy products on video call directly from there home. You just need to deliver the products. (Soon we will also do that for you.)</p>
+                                <p>People can Schedule Google Meet and do video call to you through our app "ShopOnLive" and can buy products on video call directly from their home. You just need to deliver the products. (Soon we will also do that for you.)</p>
                             </div>
                             <div className='Landing-services-div-card'>
                                 <h3>Products On Eccomerce</h3>
@@ -110,7 +110,7 @@ function Landing() {
                         <img src='/assets/pngs/whatsapp.png' />
                     </a>
                 </footer>
-            </man>
+            </main>
         </div>
     )
 }

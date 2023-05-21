@@ -160,3 +160,10 @@
     background: linear-gradient(to top, #5533FF 0%, #27D6F5 100%);
   }
 }
+
+
+@media only screen and (max-width: 380px) {
+  .Landing-navlinks{
+    display: none;
+  }
+}

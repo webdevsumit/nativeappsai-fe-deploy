@@ -21,24 +21,32 @@
   text-align: center;
 }
 
-/* width */
-::-webkit-scrollbar {
-  width: 7px;
+body{
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1; 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888; 
-}
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+@media only screen and (min-width: 700px){
+    /* width */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1; 
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #888; 
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555; 
+    }
 }
 
 .text-success{
@@ -52,24 +60,13 @@
 .btn-success{
   background-color: green!important;
   border-color: green!important;
+  color: white;
 }
 
 .btn-danger{
   background-color: red!important;
   border-color: red!important;
-}
-
-.user-submit-button1{
-  background-color: var(--user-primary);
   color: white;
-  outline: none;
-  padding: 20px 30px;
-  font-weight: bold;
-  font-size: 18px;
-  border: 2px solid var(--user-primary);
-  cursor: pointer;
-  text-align: center;
-  border-radius: 2px;
 }
 
 .user-submit-button1-light{
@@ -80,19 +77,6 @@
   font-weight: bold;
   font-size: 14px;
   border: 2px solid white;
-  cursor: pointer;
-  text-align: center;
-  border-radius: 2px;
-}
-
-.store-submit-button1{
-  background-color: var(--store-primary);
-  color: white;
-  outline: none;
-  padding: 20px 30px;
-  font-weight: bold;
-  font-size: 18px;
-  border: 2px solid var(--store-primary);
   cursor: pointer;
   text-align: center;
   border-radius: 2px;

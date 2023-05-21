@@ -1,10 +1,10 @@
 import './App.css';
-import React, { useEffect } from "react";
+import React, { } from "react";
 // import { useSelector } from 'react-redux';
 
 import { RouterProvider } from "react-router-dom";
 import { router } from './actions/routes';
-// import { Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 // import GlobalLoader from './components/commons/GlobalLoader'
 
 function App() {
@@ -13,12 +13,12 @@ function App() {
 	return (
 		<div>
 			{/* {!!isLoanding && <GlobalLoader />} */}
-			{/* <Toaster 
+			<Toaster 
 				position="top-right" 
 				toastOptions={{
 						duration: 5000,
 					}}
-			/> */}
+			/>
 			<RouterProvider router={router} />
 		</div>
 	);
