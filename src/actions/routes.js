@@ -5,6 +5,7 @@ import {
 
 // loaders
 import { loader as authLoader } from "../components/Auth";
+import { loader as SignupLoader } from './../pages/Signup';
 
 import Landing from "./../pages/Landing"
 import TermsAndConditions from "./../pages/TermsAndConditions"
@@ -251,8 +252,9 @@ export const router = createBrowserRouter([
         element: <PricacyPolicy />,
     },
     {
-        path: "/signup/:type",
+        path: "/signup/:planType",
         element: <Signup />,
+        loader: SignupLoader,
     },
     {
         path: "/login",

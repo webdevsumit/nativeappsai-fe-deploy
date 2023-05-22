@@ -4,14 +4,21 @@ import NormalInput from '../../components/commons/NormalInput';
 import { signupApi } from '../../apis/common';
 import { toast } from 'react-hot-toast';
 import SLFContainer2 from '../../components/commons/SLFContainer2';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 
-function Signup() {
+
+export const loader = async ({ params }) => {
+    return { 'planType': params.planType };
+}
+
+
+function Signup({ params }) {
 
 	const [username, setUsername] = useState("");
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [phone, setPhone] = useState("");
+	const { planType } = useLoaderData();
 	const navigate = useNavigate();
 
 	const doSignup = async () => {
@@ -25,6 +32,7 @@ function Signup() {
 			email: email.toLowerCase(),
 			phone,
 			password,
+			planType,
 		}
 
 		await signupApi(payloads).then(res=>{
