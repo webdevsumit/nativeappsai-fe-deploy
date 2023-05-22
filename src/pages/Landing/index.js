@@ -1,9 +1,11 @@
 import React, { } from 'react'
 // import { Link } from 'react-router-dom';
 import './style.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Landing() {
+
+    const navigate = useNavigate();
 
     return (
         <div className='Landing'>
@@ -74,7 +76,7 @@ function Landing() {
                                     <h5>No - Your own mobile app.</h5>
                                 </div>
                                 <h4>Rs. 199</h4>
-                                <p className='user-submit-button1-light'>Start Free Trial</p>
+                                <p className='user-submit-button1-light' onClick={()=>navigate("/signup/basic")} >Start Free Trial</p>
                             </div>
                             <div className='Landing-services-div-card Landing-pricing-div-card-center Landing-pricing-div-card' style={{border: 'none'}}>
                                 <h3>Essential</h3>

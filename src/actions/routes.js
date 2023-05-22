@@ -8,7 +8,7 @@ import { loader as authLoader } from "../components/Auth";
 
 import Landing from "./../pages/Landing"
 import TermsAndConditions from "./../pages/TermsAndConditions"
-// import Signup from './../pages/Signup';
+import Signup from './../pages/Signup';
 import Error404Page from './../components/Error404Page'
 import Login from './../pages/Login';
 // import ForgotPassword from './../pages/ForgotPassword';
@@ -250,13 +250,21 @@ export const router = createBrowserRouter([
         path: "/privacyPolicy",
         element: <PricacyPolicy />,
     },
-    // {
-    //     path: "/signup",
-    //     element: <Signup />,
-    // },
+    {
+        path: "/signup/:type",
+        element: <Signup />,
+    },
     {
         path: "/login",
         element: <Login />,
+    },
+    {
+        path: "/create-store",
+        element: <h6>Customer account</h6>,
+    },
+    {
+        path: "/forgot-password",
+        element: <h6>Forgot Password</h6>,
     },
     // {
     //     path: "/forgot-password",

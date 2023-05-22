@@ -4,7 +4,7 @@ import NormalInput from '../../components/commons/NormalInput';
 import { loginApi } from '../../apis/common';
 import { toast } from 'react-hot-toast';
 import SLFContainer2 from '../../components/commons/SLFContainer2';
-import { Link, redirect } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { setIsLoading } from './../../redux/navbar';
 
@@ -13,6 +13,7 @@ function Login() {
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
 	const dispatch = useDispatch();
+	const navigate = useNavigate();
 
 	const doLogin = async () => {
 		if(!username || !password){
@@ -21,7 +22,7 @@ function Login() {
 		}
 
 		let payloads = {
-			username,
+			username :username.toLowerCase().replace(/ /g,"_"),
 			password
 		}
 
@@ -29,7 +30,7 @@ function Login() {
 		await loginApi(payloads).then(res=>{
 			if(res.data.status === "success"){
 				localStorage.setItem('token', res.data.token);
-				redirect('/');
+				navigate('/');
 			}else{
 				toast.error(res.data.message);
 			}
@@ -39,7 +40,7 @@ function Login() {
 
 	const handleUserNameChange = (event) => {
 		let tempVal = event.target.value;
-		setUsername(tempVal.trim().toLowerCase())
+		setUsername(tempVal.trim().toLowerCase().replace(/ /g,"_"))
 	}
 
 	return (
@@ -64,7 +65,7 @@ function Login() {
 
 					<p className='user-submit-button1-dark' onClick={doLogin}>LOGIN</p>
 
-					<h5 className='Login-login-button'>Do not have an account? <Link to='/signup'>Sign Up</Link></h5>
+					<h5 className='Login-login-button'>Do not have an account? <Link to='/signup/basic'>Sign Up</Link></h5>
 					<h5 className='Login-login-button2'><Link to='/forgot-password'>Forgot Password?</Link></h5>
 					<h5 className='Login-login-button2'><Link to='/termsAndConditions'>Terms and Conditions</Link></h5>
 				</div>

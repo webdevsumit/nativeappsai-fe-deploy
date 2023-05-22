@@ -42,3 +42,21 @@ export async function loginApi(payloads) {
             .catch(err => onReject(err));
     });
 }
+
+export async function signupApi(payloads) {
+    return await new Promise(async (onResolve, onReject) => {
+        await axios.post(
+            `${baseUrl}signupByStoreOwner/`,
+            payloads,
+            {
+                headers: {
+                    'Content-Type': "application/json",
+                    'Accept': "application/json",
+                    // 'Authorization': `Token ${token}`
+                }
+            }
+        )
+            .then(res => onResolve(res))
+            .catch(err => onReject(err));
+    });
+}
