@@ -21,6 +21,12 @@ function Landing() {
                     <a href='#landing-contacts' className=''>
                         <p className='Landing-navLink'>Contacts</p>
                     </a>
+                    <Link to='/login' className=''>
+                        <p className='Landing-navLink'>Login</p>
+                    </Link>
+                    <a href='#landing-pricing' className=''>
+                        <p className='Landing-navLink'>Signup</p>
+                    </a>
                 </div>
             </nav>
             <main>
@@ -107,7 +113,7 @@ function Landing() {
                 </section>
                 <footer >
                     <a className='whatsapp-quick-contact' target='blank' href='https://wa.me/917999004229' title='Contact us on whatsapp.'>
-                        <img src='/assets/pngs/whatsapp.png' />
+                        <img src='/assets/pngs/whatsapp.png' alt='Whatsapp-button' />
                     </a>
                 </footer>
             </main>

@@ -9,14 +9,32 @@ export async function checkStoreOwnerAuthAPI() {
     return await new Promise(async (onResolve, onReject) => {
         let token = localStorage.getItem('token');
         if(!token) onReject({message: "Please Sign In."});
-        else token = "asasdfasdfasdf";
-        await axios.get(
-            `${baseUrl}checkStoreOwnerAuth/`,
+        else
+            await axios.get(
+                `${baseUrl}checkStoreOwnerAuth/`,
+                {
+                    headers: {
+                        'Content-Type': "application/json",
+                        'Accept': "application/json",
+                        'Authorization': `Token ${token}`
+                    }
+                }
+            )
+                .then(res => onResolve(res))
+                .catch(err => onReject(err));
+    });
+}
+
+export async function loginApi(payloads) {
+    return await new Promise(async (onResolve, onReject) => {
+        await axios.post(
+            `${baseUrl}loginToStoreOwnerAccount/`,
+            payloads,
             {
                 headers: {
                     'Content-Type': "application/json",
                     'Accept': "application/json",
-                    'Authorization': `Token ${token}`
+                    // 'Authorization': `Token ${token}`
                 }
             }
         )

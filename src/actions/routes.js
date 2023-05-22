@@ -1,70 +1,19 @@
 import {
-    createBrowserRouter, Outlet,
+    createBrowserRouter, 
+    // Outlet,
 } from "react-router-dom";
 
 // loaders
 import { loader as authLoader } from "../components/Auth";
-// import { loader as AllExploredStoresLoader } from "../components/AllExploredStores";
-// import { loader as StoreAuthLoader } from "../components/StoreAuth";
-// import { loader as CreateStoreLoader } from "../components/CreateStore";
-// import { loader as SignOutLoader } from "../components/SignOut";
-// import { loader as StoreSettingsLoader } from "../components/StoreSettings";
-// import { loader as ImportProductsLoader } from "../components/Import/ImportProducts";
-// import { loader as ManageProductsLoader } from "../components/ManageProducts";
-// import { loader as MyStoreEditProductLoader } from "../components/MyStoreEditProduct";
-// import { loader as StoreViewForUserLoader } from "../components/StoreViewForUser";
-// import { loader as StoreViewForUserGridProductLoader } from "../components/StoreViewForUserGridProduct";
-// import { loader as UserBagLoader } from "../components/UserBag";
-// import { loader as SetAddressAndPayLoader } from "../components/SetAddressAndPay";
-// import { loader as UserAccountLoader } from "../components/UserAccount";
-// import { loader as GlobalSettingsLoader } from "../components/GlobalSettings";
-// import { loader as MyStoreSettingsLoader } from "../components/MyStoreSettings";
-// import { loader as OrderDetailsLoader } from "../components/OrderDetails";
-// import { loader as StoreDashboardLoader } from "../components/StoreDashboard";
-// import { loader as AddNewProductLoader } from "../components/AddNewProduct";
 
-// import GlobalLoader from './../components/commons/GlobalLoader'
 import Landing from "./../pages/Landing"
 import TermsAndConditions from "./../pages/TermsAndConditions"
 // import Signup from './../pages/Signup';
 import Error404Page from './../components/Error404Page'
-// import Login from './../pages/Login';
+import Login from './../pages/Login';
 // import ForgotPassword from './../pages/ForgotPassword';
 import Auth from "../components/Auth";
 import PricacyPolicy from "../pages/PricacyPolicy";
-// import AllExploredStores from "../components/AllExploredStores";
-// import StoreAuth from "../components/StoreAuth";
-// import Explore from "../components/Explore";
-// import ExploreStores from "../components/ExploreStores";
-// import UserMenu from "../components/UserMenu";
-// import CreateStore from "../components/CreateStore";
-// import SignOut from "../components/SignOut";
-// import StoreMenu from "../components/StoreMenu";
-// import StoreSettings from "../components/StoreSettings";
-// import ImportProducts from "../components/Import/ImportProducts";
-// import ImportProductsMenu from "../components/Import/ImportProductsMenu";
-// import ImportProductsViaCsvFile from "../components/Import/ImportProductsViaCsvFile";
-// import ManageProducts from "../components/ManageProducts";
-// import MyStoreEditProduct from "../components/MyStoreEditProduct";
-// import MyStoreSettings from "../components/MyStoreSettings";
-// import StoreViewForUser from "../components/StoreViewForUser";
-// import StoreViewForUserGrid from "../components/StoreViewForUserGrid";
-// import StoreViewForUserGridProduct from "../components/StoreViewForUserGridProduct";
-// import UserNotifications from "../components/UserNotifications";
-// import UserBag from "../components/UserBag";
-// import SetAddressAndPay from "../components/SetAddressAndPay";
-// import BrazilPayment from "../components/paymentPages/BrazilPayment";
-// import IndiaPayment from "../components/paymentPages/IndiaPayment";
-// import USPayment from "../components/paymentPages/USPayment";
-// import TictagIntegration from "../components/Import/TictagIntegration";
-// import UserAccount from "../components/UserAccount";
-// import GlobalSettings from "../components/GlobalSettings";
-// import PreviousOrders from "../components/PreviousOrders";
-// import OrderDetails from "../components/OrderDetails";
-// import StorePreviousOrders from "../components/StorePreviousOrders";
-// import StoreDashboard from "../components/StoreDashboard";
-// import TicTagStoreManagementMessage from "../pages/TicTagStoreManagementMessage";
-// import AddNewProduct from "../components/AddNewProduct";
 
 export const router = createBrowserRouter([
     {
@@ -305,10 +254,10 @@ export const router = createBrowserRouter([
     //     path: "/signup",
     //     element: <Signup />,
     // },
-    // {
-    //     path: "/login",
-    //     element: <Login />,
-    // },
+    {
+        path: "/login",
+        element: <Login />,
+    },
     // {
     //     path: "/forgot-password",
     //     element: <ForgotPassword />,
