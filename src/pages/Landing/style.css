@@ -162,8 +162,8 @@
 }
 
 
-@media only screen and (max-width: 380px) {
-  .Landing-navlinks{
+@media only screen and (max-width: 550px) {
+  .Landing-navlinks-to-hide{
     display: none;
   }
 }

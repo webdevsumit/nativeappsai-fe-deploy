@@ -3,7 +3,7 @@ import './style.css'
 import NormalInput from '../../components/commons/NormalInput';
 import { signupApi } from '../../apis/common';
 import { toast } from 'react-hot-toast';
-import SLFContainer2 from '../../components/commons/SLFContainer2';
+import SLFContainer1 from '../../components/commons/SLFContainer1';
 import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 
 
@@ -104,7 +104,7 @@ function Signup({ params }) {
 						<h5 className='Login-login-button2'><Link to='/termsAndConditions'>Terms and Conditions</Link></h5>
 
 				</div>
-				<SLFContainer2 />
+				<SLFContainer1 />
 			</div>
 		</div>
 	)

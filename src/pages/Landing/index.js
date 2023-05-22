@@ -14,13 +14,13 @@ function Landing() {
                     <h1 className='Landing-navHead'>ShopOnLive</h1>
                 </Link>
                 <div className='Landing-navlinks'>
-                    <a href='#landing-services' className=''>
+                    <a href='#landing-services' className='Landing-navlinks-to-hide'>
                         <p className='Landing-navLink'>Services</p>
                     </a>
-                    <a href='#landing-pricing' className=''>
+                    <a href='#landing-pricing' className='Landing-navlinks-to-hide'>
                         <p className='Landing-navLink'>Pricing</p>
                     </a>
-                    <a href='#landing-contacts' className=''>
+                    <a href='#landing-contacts' className='Landing-navlinks-to-hide'>
                         <p className='Landing-navLink'>Contacts</p>
                     </a>
                     <Link to='/login' className=''>
