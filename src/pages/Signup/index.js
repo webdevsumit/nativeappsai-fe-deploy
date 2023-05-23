@@ -5,6 +5,8 @@ import { signupApi } from '../../apis/common';
 import { toast } from 'react-hot-toast';
 import SLFContainer1 from '../../components/commons/SLFContainer1';
 import { Link, useLoaderData, useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { setIsLoading } from '../../redux/navbar';
 
 
 export const loader = async ({ params }) => {
@@ -20,6 +22,7 @@ function Signup({ params }) {
 	const [phone, setPhone] = useState("");
 	const { planType } = useLoaderData();
 	const navigate = useNavigate();
+	const dispatch = useDispatch();
 
 	const doSignup = async () => {
 		if(!username || !email || !password || !phone){
@@ -36,6 +39,7 @@ function Signup({ params }) {
 		}
 
 		await signupApi(payloads).then(res=>{
+			dispatch(setIsLoading(true));
 			if(res.data.status === "success"){
 				localStorage.setItem('token', res.data.token);
 				navigate('/');
@@ -43,6 +47,7 @@ function Signup({ params }) {
 				toast.error(res.data.message);
 			}
 		}).catch(err=>toast.error(err.message));
+		dispatch(setIsLoading(false));
 	}
 
 	const changeWhatsappNumber = (event) => {

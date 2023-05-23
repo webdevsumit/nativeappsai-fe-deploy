@@ -46,7 +46,7 @@ export async function loginApi(payloads) {
 export async function signupApi(payloads) {
     return await new Promise(async (onResolve, onReject) => {
         await axios.post(
-            `${baseUrl}signupByStoreOwner/`,
+            `${baseUrl}SignUpByStoreOwner/`,
             payloads,
             {
                 headers: {
