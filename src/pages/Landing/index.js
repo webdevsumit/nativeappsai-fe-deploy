@@ -68,7 +68,7 @@ function Landing() {
                     <div className='Landing-services'>
                         <h1>Pricing</h1>
                         <div className='Landing-services-div'>
-                            <div className='Landing-services-div-card Landing-pricing-div-card' style={{backgroundColor: '#27D6F5', border: 'none'}}>
+                            <div className='Landing-services-div-card Landing-pricing-div-card' style={{backgroundColor: '#27d6f579', border: 'none'}}>
                                 <h3>Basic</h3>
                                 <div className='Landing-services-div-card-inner'>
                                     <h5>Video Calling App.</h5>
@@ -88,7 +88,7 @@ function Landing() {
                                 <h4>Rs. 499</h4>
                                 <p className='user-submit-button1-light'>Coming Soon</p>
                             </div>
-                            <div className='Landing-services-div-card Landing-pricing-div-card' style={{backgroundColor: '#5533FF', border: 'none'}}>
+                            <div className='Landing-services-div-card Landing-pricing-div-card' style={{backgroundColor: '#411bfb8e', border: 'none'}}>
                                 <h3>Premium</h3>
                                 <div className='Landing-services-div-card-inner'>
                                     <h5>Video Calling App.</h5>

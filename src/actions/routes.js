@@ -6,6 +6,7 @@ import {
 // loaders
 import { loader as authLoader } from "../components/Auth";
 import { loader as SignupLoader } from './../pages/Signup';
+import { loader as SignoutLoader } from './../components/SignOut';
 
 import Landing from "./../pages/Landing"
 import TermsAndConditions from "./../pages/TermsAndConditions"
@@ -15,6 +16,7 @@ import Login from './../pages/Login';
 // import ForgotPassword from './../pages/ForgotPassword';
 import Auth from "../components/Auth";
 import PricacyPolicy from "../pages/PricacyPolicy";
+import SignOut from './../components/SignOut';
 
 export const router = createBrowserRouter([
     {
@@ -272,9 +274,9 @@ export const router = createBrowserRouter([
     //     path: "/forgot-password",
     //     element: <ForgotPassword />,
     // },
-    // {
-    //     path: "/sign-out",
-    //     element: <SignOut />,
-    //     loader: SignOutLoader,
-    // },
+    {
+        path: "/sign-out",
+        element: <SignOut />,
+        loader: SignoutLoader,
+    },
 ]);
