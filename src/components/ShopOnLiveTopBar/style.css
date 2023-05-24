@@ -1,4 +1,4 @@
-.GoliveTopBar{
+.ShopOnLiveTopBar{
     /* Below three lines are also related 
     to the space behind the bar so don't forget 
     to change in Auth Screen */
@@ -16,12 +16,13 @@
     z-index: 11;
 }
 
-.GoliveTopBar-logo{
-    height: 70%;
-    margin-left: 20px;
+.ShopOnLiveTopBar-logo{
+    color: white;
+    font-size: 24px;
+    margin-left: 10px;
 }
 
-.GoliveTopBar-bigScreenNavigation{
+.ShopOnLiveTopBar-bigScreenNavigation{
     flex: 1;
     height: 100%;
     display: flex;
@@ -30,7 +31,7 @@
     transition: all ease .3s;
 }
 
-.GoliveTopBar-bigScreenNavigation>a{
+.ShopOnLiveTopBar-bigScreenNavigation>a{
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -42,20 +43,20 @@
     text-decoration: none;
 }
 
-.GoliveTopBar-active{
+.ShopOnLiveTopBar-active{
     border-bottom: 3px solid white;
 }
 
-.GoliveTopBar-pending{
+.ShopOnLiveTopBar-pending{
     opacity: 0.5;
     pointer-events: none;
 }
 
-.GoliveTopBar-icon{
+.ShopOnLiveTopBar-icon{
     max-height: 24px;
 }
 
-.GoliveTopBar-icon-link{
+.ShopOnLiveTopBar-icon-link{
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -64,7 +65,7 @@
     margin-left: 2px;
 }
 
-.GoliveTopBar-active>.GoliveTopBar-icon-link{
+.ShopOnLiveTopBar-active>.ShopOnLiveTopBar-icon-link{
     margin-bottom: -3px;
 }
 
@@ -72,7 +73,7 @@
 
 @media only screen and (max-width: 800px) {
     /* In case of changing max-with above don't forget to change for both Bottom bars. */
-    .GoliveTopBar-bigScreenNavigation{
+    .ShopOnLiveTopBar-bigScreenNavigation{
         display: none;
     }
 }

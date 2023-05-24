@@ -10,7 +10,7 @@ import { checkStoreOwnerAuthAPI } from '../../apis/common';
 import LogoOnBlue from './../LogoOnBlue';
 import UserNavbar from '../UserNavbar';
 import './style.css';
-import GoliveTopBar from '../GoliveTopBar';
+import ShopOnLiveTopBar from '../ShopOnLiveTopBar';
 import UserSidebar from '../UserSidebar';
 import { toast } from 'react-hot-toast';
 
@@ -57,7 +57,7 @@ function Auth() {
     else return (
         <div>
             <header className='Auth-extra-space-for-top-bar'>
-                <GoliveTopBar />
+                <ShopOnLiveTopBar />
             </header>
             <main className='Auth-main-content'>
                 <div className='Auth-main-content-left-container'>

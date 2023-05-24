@@ -60,3 +60,21 @@ export async function signupApi(payloads) {
             .catch(err => onReject(err));
     });
 }
+
+
+export async function getUpcomingMeetingsAPI(page) {
+    return await new Promise(async (onResolve, onReject) => {
+        await axios.get(
+            `${baseUrl}meets/getUpcomingMeetings/?page=${page}&recordsPerPage=10`,
+            {
+                headers: {
+                    'Content-Type': "application/json",
+                    'Accept': "application/json",
+                    'Authorization': `Token ${localStorage.getItem("token")}`
+                }
+            }
+        )
+            .then(res => onResolve(res))
+            .catch(err => onReject(err));
+    });
+}

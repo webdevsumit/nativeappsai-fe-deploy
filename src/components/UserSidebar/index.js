@@ -8,7 +8,7 @@ function UserSidebar() {
 		<div className='UserSidebar'>
 			<NavLink to='/' className={({ isActive, isPending }) => isActive ? "UserSidebar-active": isPending ? "UserSidebar-pending" : ""}>
 				<img className='UserSidebar-icon' src='/assets/icons/svgs/homeWhite2.svg' alt='home' />
-					Home
+					Meets
 				<h6 className='UserSidebar-custom-active-button'>:)</h6>
 			</NavLink>
 			<NavLink to='/account' className={({ isActive, isPending }) => isActive ? "UserSidebar-active": isPending ? "UserSidebar-pending" : ""}>
