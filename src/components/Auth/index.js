@@ -16,6 +16,7 @@ import { toast } from 'react-hot-toast';
 
 export async function loader() {
     let isAuthenticated = false;
+    
     await checkStoreOwnerAuthAPI().then((res) => {
         if(res.data.status === 'success'){
             isAuthenticated = true;
@@ -23,6 +24,7 @@ export async function loader() {
     }).catch(err => toast.error(err.message));
     
     if(!isAuthenticated){
+        localStorage.setItem("redirectLink", window.location.pathname);
         return redirect('/landing');
     }
     return {};

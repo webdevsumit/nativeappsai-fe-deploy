@@ -30,7 +30,11 @@ function Login() {
 		await loginApi(payloads).then(res=>{
 			if(res.data.status === "success"){
 				localStorage.setItem('token', res.data.token);
-				navigate('/');
+				let redirectLink = localStorage.getItem("redirectLink");
+				if(!!redirectLink)
+					navigate(redirectLink);
+				else
+					navigate('/');
 			}else{
 				toast.error(res.data.message);
 			}

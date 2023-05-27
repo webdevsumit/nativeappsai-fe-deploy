@@ -30,6 +30,10 @@ export const router = createBrowserRouter([
                 path: "/",
                 element: <Meets />,
             },
+            {
+                path: "/meeting/:meetId/confirm",
+                element: <Meets />,
+            },
         ]
     },
     {

@@ -74,7 +74,7 @@ function Meets() {
 
     return (
         <div className='Meets' id="Meetings_element">
-            <h4 className='Meets-TotalresultNum'>Total Upcoming Meetins: {totalMeetings}</h4>
+            <h4 className='Meets-TotalresultNum'>Total Upcoming Meetings: {totalMeetings}</h4>
 			{mettings.map((meeting, i) => <MeetingCard key={i} meeting={meeting} />)}
             {!caughtAll && <><div className='Meets-Loading-more'><p>loading...</p></div></>}
         </div>
