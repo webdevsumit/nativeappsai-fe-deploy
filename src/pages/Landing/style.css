@@ -52,7 +52,7 @@
 }
 
 .Landing-hero-image{
-  max-width: 100%;
+  max-width: 90%;
   width: 530px;
   /* height: 400px; */
   margin-left: 5%;
@@ -91,7 +91,7 @@
 .Landing-services-div-card{
   width: 400px;
   max-width: 100%;
-  height: 200px;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -101,6 +101,10 @@
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin-bottom: 15px;
+}
+
+.Landing-services-div-card-note{
+  margin: 5%;
 }
 
 .Landing-services-div-card-inner>h5{

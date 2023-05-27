@@ -61,7 +61,7 @@ function Landing() {
                                 <p>We will build Mobile App for your shop that can be downloaded by anyone and can buy items with that app. This will help you to increase your regular clients and your direct sales.</p>
                             </div>
                         </div>
-                        <p>Everything will be integrated to each other that mean people can also schedule meeting with you through you own app or through the eccomerce platform.</p>
+                        <p className='Landing-services-div-card-note'>Everything will be integrated to each other that mean people can also schedule meeting with you through you own app or through the eccomerce platform.</p>
                     </div>
                 </section>
                 <section id='landing-pricing'>
