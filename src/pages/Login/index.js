@@ -31,7 +31,7 @@ function Login() {
 			if(res.data.status === "success"){
 				localStorage.setItem('token', res.data.token);
 				let redirectLink = localStorage.getItem("redirectLink");
-				if(!!redirectLink)
+				if(!!redirectLink && redirectLink!=="/landing")
 					navigate(redirectLink);
 				else
 					navigate('/');

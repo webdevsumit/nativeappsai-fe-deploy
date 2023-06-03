@@ -78,3 +78,23 @@ export async function getUpcomingMeetingsAPI(page) {
             .catch(err => onReject(err));
     });
 }
+
+export async function checkMeetToConfirmByIdAPI(meetId) {
+    return await new Promise(async (onResolve, onReject) => {
+        let token = localStorage.getItem('token');
+        if(!token) onReject({message: "Please Sign In."});
+        else
+            await axios.get(
+                `${baseUrl}meets/checkMeetToConfirmById/${meetId}/`,
+                {
+                    headers: {
+                        'Content-Type': "application/json",
+                        'Accept': "application/json",
+                        'Authorization': `Token ${token}`
+                    }
+                }
+            )
+                .then(res => onResolve(res))
+                .catch(err => onReject(err));
+    });
+}

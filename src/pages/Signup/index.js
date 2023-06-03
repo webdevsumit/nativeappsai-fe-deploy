@@ -14,7 +14,7 @@ export const loader = async ({ params }) => {
 }
 
 
-function Signup({ params }) {
+function Signup() {
 
 	const [username, setUsername] = useState("");
 	const [email, setEmail] = useState("");
