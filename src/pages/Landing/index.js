@@ -78,8 +78,8 @@ function Landing() {
                                     <h5>No - Product on Eccomerce.</h5>
                                     <h5>No - Your own mobile app.</h5>
                                 </div>
-                                <h4>Rs. 99</h4>
-                                <p onClick={()=>window.location.href="https://play.google.com/store/apps/details?id=com.shoponlive&pli=1"} className='user-submit-button1-light'>Start Free Trial</p>
+                                <h4>Rs. 99 (Just For Sellers)</h4>
+                                <p onClick={()=>window.location.href="https://play.google.com/store/apps/details?id=com.shoponlive&pli=1"} className='user-submit-button1-light'>Download App</p>
                             </div>
                             <div className='Landing-services-div-card Landing-pricing-div-card-center Landing-pricing-div-card' style={{border: 'none'}}>
                                 <h3>Essential</h3>
@@ -111,8 +111,8 @@ function Landing() {
                             <a target='blank' href='mailto:sumit@shoponlive.in'>sumit@shoponlive.in</a>
                             <a target='blank' href='tel:917999004229'>+91 7999004229</a>
                             <a target='blank' href='https://wa.me/917999004229'>Chat on Whatsapp</a>
-                            <Link to="/">Privacy Policy</Link>
-                            <Link to="/">Terms & Conditions</Link>
+                            <Link to="/privacyPolicy">Privacy Policy</Link>
+                            <Link to="/termsAndConditions">Terms & Conditions</Link>
                         </div>
                     </div>
                 </section>

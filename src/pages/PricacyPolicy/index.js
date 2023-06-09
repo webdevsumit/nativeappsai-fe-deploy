@@ -8,9 +8,7 @@ function PricacyPolicy() {
         <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your
             information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
         <p>We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection
-            and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the
-            help of the <span>Free
-                Privacy Policy Generator</span>.</p>
+            and use of information in accordance with this Privacy Policy.</p>
         <h1>Interpretation and Definitions</h1>
         <h2>Interpretation</h2>
         <p>The words of which the initial letter is capitalized have meanings defined under the following conditions. The
@@ -117,6 +115,8 @@ function PricacyPolicy() {
             Media Service's account. If You choose to provide such information and Personal Data, during registration or
             otherwise, You are giving the Company permission to use, share, and store it in a manner consistent with this
             Privacy Policy.</p>
+        <h2>Google Calendar Access and Data uses</h2>
+        <p>We are using Google Calendar API to access you google Calendar data. We use Google Calendar to create an event in your Google Calendar but we asks for permissions if you are a seller and we ask when you confirm your first meeting. Basically we are creating Google Meet link but unfortunately there is no direct way to do that so we need to use Google Calendar to generate Google Meet link. </p>
         <h2>Use of Your Personal Data</h2>
         <p>The Company may use Personal Data for the following purposes:</p>
         <ul>
