@@ -50,9 +50,9 @@ function Auth() {
 		    r.style.setProperty('--store-primary', storeThemeColor);
         }
 
-        // if(location.pathname === "/" || location.pathname === ""){
-        //     navigate("/products")
-        // }
+        if(location.pathname === "/" || location.pathname === ""){
+            navigate("/products")
+        }
 
         setTimeout(() => {
             setIsLoading(false);
