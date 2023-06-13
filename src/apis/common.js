@@ -79,6 +79,41 @@ export async function getUpcomingMeetingsAPI(page) {
     });
 }
 
+export async function fetchMyProductsAPI(page) {
+    return await new Promise(async (onResolve, onReject) => {
+        await axios.get(
+            `${baseUrl}products_data/fetchMyProducts/?page=${page}&recordsPerPage=10`,
+            {
+                headers: {
+                    'Content-Type': "application/json",
+                    'Accept': "application/json",
+                    'Authorization': `Token ${localStorage.getItem("token")}`
+                }
+            }
+        )
+            .then(res => onResolve(res))
+            .catch(err => onReject(err));
+    });
+}
+
+export async function adddNewProductAPI(payloads) {
+    return await new Promise(async (onResolve, onReject) => {
+        await axios.post(
+            `${baseUrl}products_data/adddNewProduct/`,
+            payloads,
+            {
+                headers: {
+                    'Content-Type': "application/json",
+                    'Accept': "application/json",
+                    'Authorization': `Token ${localStorage.getItem("token")}`
+                }
+            }
+        )
+            .then(res => onResolve(res))
+            .catch(err => onReject(err));
+    });
+}
+
 export async function checkMeetToConfirmByIdAPI(meetId) {
     return await new Promise(async (onResolve, onReject) => {
         let token = localStorage.getItem('token');

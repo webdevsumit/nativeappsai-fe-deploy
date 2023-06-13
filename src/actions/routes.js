@@ -1,4 +1,5 @@
 import {
+    Outlet,
     createBrowserRouter, 
     // Outlet,
 } from "react-router-dom";
@@ -18,7 +19,9 @@ import Error404Page from './../components/Error404Page'
 import Auth from "../components/Auth";
 import PricacyPolicy from "../pages/PricacyPolicy";
 import SignOut from './../components/SignOut';
-import Meets from "../pages/Meets";
+// import Meets from "../pages/Meets";
+import Products from "../pages/Products";
+import AddNewProduct from "../pages/AddNewProduct";
 // import AppConfirmPage from "../pages/AppConfirmPage";
 
 export const router = createBrowserRouter([
@@ -30,7 +33,25 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element: <Meets />,
+                element: <p></p>,
+            },
+            {
+                path: "/products",
+                element: <Outlet />,
+                children: [
+                    {
+                        path: "/products",
+                        element: <Products />,
+                    },
+                    {
+                        path: "/products/add",
+                        element: <AddNewProduct />,
+                    },
+                ]
+            },
+            {
+                path: "/customer-service",
+                element: <h1 style={{textAlign: 'center'}}>Whatsapp on +91 7999004229</h1>,
             },
             // {
             //     path: "/meeting/:meetId/confirm",
@@ -43,10 +64,6 @@ export const router = createBrowserRouter([
         path: "/landing",
         element: <Landing />,
         errorElement: <Error404Page />,
-    },
-    {
-        path: "/customer-service",
-        element: <h6>Whatsapp on +91 7999004229</h6>,
     },
     {
         path: "/termsAndConditions",

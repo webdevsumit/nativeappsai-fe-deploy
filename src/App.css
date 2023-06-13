@@ -82,7 +82,7 @@ body{
 }
 
 .user-submit-button1-dark{
-  background-color: black;
+  background-color:var(--user-primary);
   color: white;
   outline: none;
   padding: 10px 15px;
@@ -91,7 +91,7 @@ body{
   border: 2px solid white;
   cursor: pointer;
   text-align: center;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 .w-100{

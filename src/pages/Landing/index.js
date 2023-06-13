@@ -41,8 +41,8 @@ function Landing() {
                         <div className='Landing-hero-div'>
                             <h1>Everything Everywhere All at Once</h1>
                             <h3>Your Shop on Video Call Shopping App.</h3>
-                            <h3>Your products on ShopOnLive eccomerce. (coming soon)</h3>
-                            <h3>You own Shopping Mobile App. (coming soon)</h3>
+                            <h3>Your products on ShopOnLive eccomerce.</h3>
+                            <h3>You own Shopping Mobile App.</h3>
                             <h3>Integration amongst them.</h3>
                         </div>
                     </div>
@@ -78,8 +78,8 @@ function Landing() {
                                     <h5>No - Product on Eccomerce.</h5>
                                     <h5>No - Your own mobile app.</h5>
                                 </div>
-                                <h4>Rs. 99 (Just For Sellers)</h4>
-                                <p onClick={()=>window.location.href="https://play.google.com/store/apps/details?id=com.shoponlive&pli=1"} className='user-submit-button1-light'>Download App</p>
+                                <h4>Rs. 99 (Free For Now)</h4>
+                                <p onClick={()=>window.location.href="https://play.google.com/store/apps/details?id=com.shoponlive&pli=1"} className='user-submit-button1-light'>Download The App</p>
                             </div>
                             <div className='Landing-services-div-card Landing-pricing-div-card-center Landing-pricing-div-card' style={{border: 'none'}}>
                                 <h3>Essential</h3>
@@ -89,7 +89,7 @@ function Landing() {
                                     <h5>No - Your own mobile app.</h5>
                                 </div>
                                 <h4>Rs. 499</h4>
-                                <p className='user-submit-button1-light'>Coming Soon</p>
+                                <p onClick={()=>window.location.href="https://wa.me/917999004229"} className='user-submit-button1-light'>Know More</p>
                             </div>
                             <div className='Landing-services-div-card Landing-pricing-div-card' style={{backgroundColor: '#411bfb8e', border: 'none'}}>
                                 <h3>Premium</h3>
@@ -99,7 +99,7 @@ function Landing() {
                                     <h5>Your own mobile app.</h5>
                                 </div>
                                 <h4>Rs. 999</h4>
-                                <p className='user-submit-button1-light'>Coming Soon</p>
+                                <p onClick={()=>window.location.href="https://wa.me/917999004229"} className='user-submit-button1-light'>Know More</p>
                             </div>
                         </div>
                     </div>

@@ -3,28 +3,30 @@ import {
     redirect, 
     // useLoaderData, 
     // useNavigate, 
-    Outlet 
+    Outlet, 
+    useLocation,
+    useNavigate
 } from 'react-router-dom';
-// import { checkStoreOwnerAuthAPI } from '../../apis/common';
+import { checkStoreOwnerAuthAPI } from '../../apis/common';
 // import FallingStarts from '../FallingStars';
 import LogoOnBlue from './../LogoOnBlue';
 import UserNavbar from '../UserNavbar';
 import './style.css';
 import ShopOnLiveTopBar from '../ShopOnLiveTopBar';
 import UserSidebar from '../UserSidebar';
-// import { toast } from 'react-hot-toast';
+import { toast } from 'react-hot-toast';
 
 export async function loader() {
     let isAuthenticated = false;
     
-    // await checkStoreOwnerAuthAPI().then((res) => {
-    //     if(res.data.status === 'success'){
-    //         isAuthenticated = true;
-    //     }else toast.error(res.data.message);
-    // }).catch(err => toast.error(err.message));
+    await checkStoreOwnerAuthAPI().then((res) => {
+        if(res.data.status === 'success'){
+            isAuthenticated = true;
+        }else toast.error(res.data.message);
+    }).catch(err => toast.error(err.message));
     
     if(!isAuthenticated){
-        // localStorage.setItem("redirectLink", window.location.pathname);
+        localStorage.setItem("redirectLink", window.location.pathname);
         return redirect('/landing');
     }
     return {};
@@ -32,9 +34,8 @@ export async function loader() {
 
 function Auth() {
 
-    // const { redirectTo } = useLoaderData();
-    // const history = useNavigate();
-    // history(redirectTo);
+    const location = useLocation();
+    const navigate = useNavigate();
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
@@ -48,6 +49,11 @@ function Auth() {
         if(!!storeThemeColor && storeThemeColor!=='null' && storeThemeColor!=='undefined') {
 		    r.style.setProperty('--store-primary', storeThemeColor);
         }
+
+        // if(location.pathname === "/" || location.pathname === ""){
+        //     navigate("/products")
+        // }
+
         setTimeout(() => {
             setIsLoading(false);
         }, 1500);
