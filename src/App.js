@@ -1,7 +1,6 @@
 import './App.css';
 import React, { } from "react";
 import { useSelector } from 'react-redux';
-
 import { RouterProvider } from "react-router-dom";
 import { router } from './actions/routes';
 import { Toaster } from 'react-hot-toast';
