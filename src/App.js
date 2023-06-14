@@ -7,7 +7,7 @@ import { Toaster } from 'react-hot-toast';
 import GlobalLoader from './components/commons/GlobalLoader'
 
 function App() {
-	const { isLoanding } = useSelector((state) => state.navbar);
+	const { isLoanding } = useSelector((state) => state.navbar );
 
 	return (
 		<div>
