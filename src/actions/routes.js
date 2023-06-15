@@ -9,7 +9,7 @@ import { loader as authLoader } from "../components/Auth";
 // import { loader as SignupLoader } from './../pages/Signup';
 import { loader as SignoutLoader } from './../components/SignOut';
 // import { loader as AppConfirmPageLoader } from "../pages/AppConfirmPage";
-
+import EditProduct, { loader as editProductLoader } from "../pages/EditProduct";
 import Landing from "./../pages/Landing"
 import TermsAndConditions from "./../pages/TermsAndConditions"
 // import Signup from './../pages/Signup';
@@ -46,6 +46,11 @@ export const router = createBrowserRouter([
                     {
                         path: "/products/add",
                         element: <AddNewProduct />,
+                    },
+                    {
+                        path: "/products/edit/:id",
+                        element: <EditProduct />,
+                        loader: editProductLoader,
                     },
                 ]
             },
