@@ -133,3 +133,44 @@ export async function checkMeetToConfirmByIdAPI(meetId) {
                 .catch(err => onReject(err));
     });
 }
+
+export async function getMyProductByIdAPI(id) {
+    return await new Promise(async (onResolve, onReject) => {
+        let token = localStorage.getItem('token');
+        if(!token) onReject({message: "Please Sign In."});
+        else
+            await axios.get(
+                `${baseUrl}products_data/getProductById/${id}/`,
+                {
+                    headers: {
+                        'Content-Type': "application/json",
+                        'Accept': "application/json",
+                        'Authorization': `Token ${token}`
+                    }
+                }
+            )
+                .then(res => onResolve(res))
+                .catch(err => onReject(err));
+    });
+}
+
+export async function updateProductByIdAPI(id, payloads) {
+    return await new Promise(async (onResolve, onReject) => {
+        let token = localStorage.getItem('token');
+        if(!token) onReject({message: "Please Sign In."});
+        else
+            await axios.post(
+                `${baseUrl}products_data/updateProductById/${id}/`,
+                payloads,
+                {
+                    headers: {
+                        'Content-Type': "application/json",
+                        'Accept': "application/json",
+                        'Authorization': `Token ${token}`
+                    }
+                }
+            )
+                .then(res => onResolve(res))
+                .catch(err => onReject(err));
+    });
+}
