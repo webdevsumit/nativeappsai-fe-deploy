@@ -174,3 +174,74 @@ export async function updateProductByIdAPI(id, payloads) {
                 .catch(err => onReject(err));
     });
 }
+
+
+export async function getImagesByProductIdAPI(id) {
+    return await new Promise(async (onResolve, onReject) => {
+        await axios.get(
+            `${baseUrl}products_data/getImagesByProductId/${id}/`,
+            {
+                headers: {
+                    'Content-Type': "application/json",
+                    'Accept': "application/json",
+                    'Authorization': `Token ${localStorage.getItem("token")}`
+                }
+            }
+        )
+            .then(res => onResolve(res))
+            .catch(err => onReject(err));
+    });
+}
+
+export async function addImageByProductIdAPI(id, payloads) {
+    return await new Promise(async (onResolve, onReject) => {
+        await axios.post(
+            `${baseUrl}products_data/addImageByProductId/${id}/`,
+            payloads,
+            {
+                headers: {
+                    'Content-Type': "multipart/form-data",
+                    'Accept': "application/json",
+                    'Authorization': `Token ${localStorage.getItem("token")}`
+                }
+            }
+        )
+            .then(res => onResolve(res))
+            .catch(err => onReject(err));
+    });
+}
+
+export async function replaceImageByProductIdAndImageIdAPI(productId, imageId, payloads) {
+    return await new Promise(async (onResolve, onReject) => {
+        await axios.post(
+            `${baseUrl}products_data/replaceImageByProductIdAndImageId/${productId}/${imageId}/`,
+            payloads,
+            {
+                headers: {
+                    'Content-Type': "multipart/form-data",
+                    'Accept': "application/json",
+                    'Authorization': `Token ${localStorage.getItem("token")}`
+                }
+            }
+        )
+            .then(res => onResolve(res))
+            .catch(err => onReject(err));
+    });
+}
+
+export async function deleteImageByProductIdAndImageIdAPI(productId, imageId) {
+    return await new Promise(async (onResolve, onReject) => {
+        await axios.delete(
+            `${baseUrl}products_data/deleteImageByProductIdAndImageId/${productId}/${imageId}/`,
+            {
+                headers: {
+                    'Content-Type': "application/json",
+                    'Accept': "application/json",
+                    'Authorization': `Token ${localStorage.getItem("token")}`
+                }
+            }
+        )
+            .then(res => onResolve(res))
+            .catch(err => onReject(err));
+    });
+}

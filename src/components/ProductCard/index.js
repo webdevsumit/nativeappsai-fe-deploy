@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './style.css'
 import { useNavigate } from 'react-router-dom';
 
-function ProductCard({ product }) {
+function ProductCard({ product, setShowPhotoGallery }) {
     const [showMore, setShowMore] = useState(product?.description?.length > 100);
     const nevigate = useNavigate()
     
@@ -12,9 +12,11 @@ function ProductCard({ product }) {
             <h2 className='ProductCard-name'>{product.name}</h2>
             <p className='ProductCard-description'>{showMore ? product.description.substring(0, 100) : product.description}</p>
             <div className='ProductCard-buttons'>
-                <p className='user-submit-button1-dark btn-danger' onClick={()=>{}}>delete</p>
-                <p className='user-submit-button1-dark' onClick={()=>{nevigate(`/products/edit/${product.id}`)}}>edit</p>
-                {showMore ? <p className='user-submit-button1-dark' onClick={()=>setShowMore(false)}>know more</p> : <p></p>}
+                <p className='user-submit-button1-dark btn-danger' onClick={()=>{}}>DELETE</p>
+                <p className='user-submit-button1-dark' onClick={()=>{setShowPhotoGallery(product.id)}}>PHOTOS</p>
+                {/* <p className='user-submit-button1-dark' onClick={()=>{setShowPhotoGallery(product.id)}}>DISABLE</p> */}
+                <p className='user-submit-button1-dark' onClick={()=>{nevigate(`/products/edit/${product.id}`)}}>EDIT</p>
+                {showMore ? <p className='user-submit-button1-dark' onClick={()=>setShowMore(false)}>MORE</p> : <p></p>}
             </div>
         </div>
     )

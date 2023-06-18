@@ -5,6 +5,7 @@ import { fetchMyProductsAPI } from '../../apis/common';
 import ProductCard from '../../components/ProductCard';
 import { toast } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
+import PhotoGalleryEditPopup from '../../components/PhotoGalleryEditPopup';
 
 
 var globelCaughtAll = false;
@@ -20,6 +21,7 @@ function Products() {
     const [caughtAll, setCaughtAll] = useState(globelCaughtAll);
     const [totalProducts, setTotalProducts] = useState(0);
     const [pendingCall, setPendingCall] = useState(globelPendingCall);
+	const [showPhotoGallery, setShowPhotoGallery] = useState(false);
 
     const fetchMeetings = async () => {
 		setPendingCall(true);
@@ -79,8 +81,9 @@ function Products() {
         <div className='Products' id="Products_element">
 			<div className='Products-add_more-button' onClick={()=>navigate("/products/add")}><p>+</p></div>
             <h4 className='Products-TotalresultNum'>Number Of Products Added: {totalProducts}</h4>
-			{products.map((product, i) => <ProductCard key={i} product={product} />)}
+			{products.map((product, i) => <ProductCard key={i} setShowPhotoGallery={setShowPhotoGallery} product={product} />)}
             {!caughtAll && <><div className='Products-Loading-more'><p>loading...</p></div></>}
+			{!!showPhotoGallery && <PhotoGalleryEditPopup productId={showPhotoGallery} onClosePopup={()=>setShowPhotoGallery(false)} />}
         </div>
     )
 }
