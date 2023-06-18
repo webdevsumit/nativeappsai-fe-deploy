@@ -62,6 +62,12 @@ body{
   color: white;
 }
 
+.btn-warning{
+  background-color: orange!important;
+  border-color: orange!important;
+  color: white;
+}
+
 .btn-danger{
   background-color: red!important;
   border-color: red!important;

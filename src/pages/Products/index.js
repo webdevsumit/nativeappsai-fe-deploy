@@ -28,9 +28,9 @@ function Products() {
 		await fetchMyProductsAPI(globalPageNum).then(res => {
 			if (res.data.status === 'success') {
                 if(res.data.page===1){
-                    setProducts(res.data.my_proudcts);
+                    setProducts(res.data.my_products);
                 }else{
-                    setProducts(renderedMeetings=>[...renderedMeetings, ...res.data.my_proudcts]);
+                    setProducts(renderedProducts=>[...renderedProducts, ...res.data.my_products]);
                 }
                 setCaughtAll(res.data.caughtAll);
                 setTotalProducts(res.data.my_proudcts_count)

@@ -20,12 +20,17 @@
 
 .ProductCard-buttons{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
 }
 
 .ProductCard-buttons>p{
-    padding: 8px;
+    padding: 2px;
     border: none;
-    min-width: 75px;
+    min-width: 40px;
+    margin: 4px;
+}
+
+.ProductCard-btn-icon{
+    width: 25px;
 }
