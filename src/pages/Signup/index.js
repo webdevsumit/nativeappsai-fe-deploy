@@ -20,6 +20,7 @@ function Signup() {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [phone, setPhone] = useState("");
+	const [zipcode, setZipcode] = useState("");
 	const { planType } = useLoaderData();
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
@@ -35,6 +36,7 @@ function Signup() {
 			email: email.toLowerCase(),
 			phone,
 			password,
+			zipcode: zipcode.trim(),
 			planType,
 		}
 
@@ -42,7 +44,7 @@ function Signup() {
 			dispatch(setIsLoading(true));
 			if(res.data.status === "success"){
 				localStorage.setItem('token', res.data.token);
-				navigate('/');
+				navigate(`/signup/${planType}/store`);
 			}else{
 				toast.error(res.data.message);
 			}
@@ -91,6 +93,15 @@ function Signup() {
 							type='password'
 							value={password}
 							onChange={e=>setPassword(e.target.value)}
+						/>
+
+						<NormalInput 
+							placeholder="Zipcode"
+							value={zipcode}
+							onChange={e=>setZipcode(e.target.value)}
+							classNames="Signup-input-box-length"
+							type='text'
+							max={6}
 						/>
 
 						<NormalInput 

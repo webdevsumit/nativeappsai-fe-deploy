@@ -1,0 +1,68 @@
+/* .SignupAddStoreDetails{
+    background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+} */
+
+.SignupAddStoreDetails-main {
+  width: 100%;
+  min-height: 100vh;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background: radial-gradient(ellipse at bottom, #27d6f5 0%, #ffffff 100%);
+}
+
+#SignupAddStoreDetails-store-desc-input {
+  width: 100%;
+}
+
+.SignupAddStoreDetails-input-div {
+  margin-top: 10px;
+  max-width: 100%;
+  width: 80%;
+}
+
+.SignupAddStoreDetails-input-label {
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 3px;
+  color: var(--user-primary);
+  margin-bottom: 2px;
+}
+
+.SignupAddStoreDetails-container1 {
+  width: 90%;
+  max-width: 400px;
+  min-height: 500px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.SignupAddStoreDetails-input-box-length {
+  min-width: 260px;
+}
+
+@media only screen and (max-width: 700px) {
+  /* .SignupAddStoreDetails-container1{
+        
+    } */
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1120px) {
+  .SignupAddStoreDetails-container1 {
+    margin-top: 17vh;
+    margin-bottom: 20vh;
+  }
+}

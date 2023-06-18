@@ -89,7 +89,7 @@ function Landing() {
                                     <h5>No - Your own mobile app.</h5>
                                 </div>
                                 <h4>Rs. 499</h4>
-                                <p onClick={()=>window.location.href="https://wa.me/917999004229"} className='user-submit-button1-light'>Know More</p>
+                                <p onClick={()=>window.location.href="https://wa.me/917999004229"} className='user-submit-button1-light'>KNOW MORE</p>
                             </div>
                             <div className='Landing-services-div-card Landing-pricing-div-card' style={{backgroundColor: '#411bfb8e', border: 'none'}}>
                                 <h3>Premium</h3>
@@ -99,7 +99,7 @@ function Landing() {
                                     <h5>Your own mobile app.</h5>
                                 </div>
                                 <h4>Rs. 999</h4>
-                                <p onClick={()=>window.location.href="https://wa.me/917999004229"} className='user-submit-button1-light'>Know More</p>
+                                <p onClick={()=>window.location.href="/signup/premium"} className='user-submit-button1-light'>SELECT</p>
                             </div>
                         </div>
                     </div>

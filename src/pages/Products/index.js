@@ -33,7 +33,7 @@ function Products() {
                     setProducts(renderedProducts=>[...renderedProducts, ...res.data.my_products]);
                 }
                 setCaughtAll(res.data.caughtAll);
-                setTotalProducts(res.data.my_proudcts_count)
+                setTotalProducts(res.data.my_products_count)
 			}
 		}).catch(err => toast.error(err.message));
 		setPendingCall(false);

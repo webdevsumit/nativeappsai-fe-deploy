@@ -46,7 +46,7 @@ export async function loginApi(payloads) {
 export async function signupApi(payloads) {
     return await new Promise(async (onResolve, onReject) => {
         await axios.post(
-            `${baseUrl}SignUpByStoreOwner/`,
+            `${baseUrl}signupByStoreOwner/`,
             payloads,
             {
                 headers: {
@@ -231,8 +231,26 @@ export async function replaceImageByProductIdAndImageIdAPI(productId, imageId, p
 
 export async function deleteImageByProductIdAndImageIdAPI(productId, imageId) {
     return await new Promise(async (onResolve, onReject) => {
-        await axios.delete(
+        await axios.get(
             `${baseUrl}products_data/deleteImageByProductIdAndImageId/${productId}/${imageId}/`,
+            {
+                headers: {
+                    'Content-Type': "application/json",
+                    'Accept': "application/json",
+                    'Authorization': `Token ${localStorage.getItem("token")}`
+                }
+            }
+        )
+            .then(res => onResolve(res))
+            .catch(err => onReject(err));
+    });
+}
+
+export async function signupAddStoreDetailsAPI(payloads) {
+    return await new Promise(async (onResolve, onReject) => {
+        await axios.post(
+            `${baseUrl}signupAddStoreDetails/`,
+            payloads,
             {
                 headers: {
                     'Content-Type': "application/json",
