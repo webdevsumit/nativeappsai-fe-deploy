@@ -23,7 +23,7 @@ import SignOut from './../components/SignOut';
 import Products from "../pages/Products";
 import AddNewProduct from "../pages/AddNewProduct";
 import SignupAddStoreDetails from "../pages/SignupAddStoreDetails";
-// import AppConfirmPage from "../pages/AppConfirmPage";
+import Orders from "../pages/Orders";
 
 export const router = createBrowserRouter([
     {
@@ -58,6 +58,10 @@ export const router = createBrowserRouter([
             {
                 path: "/customer-service",
                 element: <h1 style={{textAlign: 'center'}}>Whatsapp on +91 7999004229</h1>,
+            },
+            {
+                path: "/orders",
+                element: <Orders />,
             },
             // {
             //     path: "/meeting/:meetId/confirm",

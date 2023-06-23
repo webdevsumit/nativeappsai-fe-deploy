@@ -11,6 +11,11 @@ function UserSidebar() {
 					My Products
 				<h6 className='UserSidebar-custom-active-button'>:)</h6>
 			</NavLink>
+			<NavLink to='/orders' className={({ isActive, isPending }) => isActive ? "UserSidebar-active": isPending ? "UserSidebar-pending" : ""}>
+				<img className='UserSidebar-icon' src='/assets/icons/svgs/orders.svg' alt='orders' />
+					Orders
+				<h6 className='UserSidebar-custom-active-button'>:)</h6>
+			</NavLink>
 			<NavLink to='/account' className={({ isActive, isPending }) => isActive ? "UserSidebar-active": isPending ? "UserSidebar-pending" : ""}>
 				<img className='UserSidebar-icon' src='/assets/icons/svgs/accounts.svg' alt='account-settings' />
 					Account

@@ -1,0 +1,16 @@
+.Orders-Loading-more{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Orders-Loading-more>p{
+    text-align: center;
+}
+
+.Orders-TotalresultNum{
+    margin-top: 6px;
+    margin-left: 6px;
+    color: var(--user-primary);
+}

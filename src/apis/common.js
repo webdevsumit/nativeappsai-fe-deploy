@@ -263,3 +263,20 @@ export async function signupAddStoreDetailsAPI(payloads) {
             .catch(err => onReject(err));
     });
 }
+
+export async function getUsersOrdersAPI({page=1}) {
+    return await new Promise(async (onResolve, onReject) => {
+        await axios.get(
+            `${baseUrl}products_data/fetchOrders/?page=${page}&recordsPerPage=10`,
+            {
+                headers: {
+                    'Content-Type': "application/json",
+                    'Accept': "application/json",
+                    'Authorization': `Token ${localStorage.getItem("token")}`
+                }
+            }
+        )
+            .then(res => onResolve(res))
+            .catch(err => onReject(err));
+    });
+}
