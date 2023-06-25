@@ -47,7 +47,7 @@ function OrderDetails() {
             return;
         }
         if(!data.is_confirmed){
-            toast.error("Products are just in the client's bag.");
+            toast.error("Products are just in client's bag.");
             return;
         }
         await cancelTheOrderFromStoreByIdAPI(data.id).then(res=>{
