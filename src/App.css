@@ -52,6 +52,10 @@ body{
   color: green!important;
 }
 
+.text-primary{
+  color: var(--user-primary)!important;
+}
+
 .text-danger{
   color: red!important;
 }
@@ -76,6 +80,10 @@ body{
   background-color: red!important;
   border-color: red!important;
   color: white;
+}
+
+.btn-disabled{
+  opacity: .6;
 }
 
 .user-submit-button1-light{

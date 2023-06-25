@@ -7,12 +7,14 @@ import {
 // loaders
 import { loader as authLoader } from "../components/Auth";
 import { loader as SignupLoader } from './../pages/Signup';
+import { loader as OrderDetailsLoader } from './../pages/OrderDetails';
 import { loader as SignoutLoader } from './../components/SignOut';
 // import { loader as AppConfirmPageLoader } from "../pages/AppConfirmPage";
 import EditProduct, { loader as editProductLoader } from "../pages/EditProduct";
 import Landing from "./../pages/Landing"
 import TermsAndConditions from "./../pages/TermsAndConditions"
 import Signup from './../pages/Signup';
+import OrderDetails from './../pages/OrderDetails'
 import Error404Page from './../components/Error404Page'
 import Login from './../pages/Login';
 // import ForgotPassword from './../pages/ForgotPassword';
@@ -61,7 +63,18 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/orders",
-                element: <Orders />,
+                element: <Outlet />,
+                children: [
+                    {
+                        path: "/orders",
+                        element: <Orders />,
+                    },
+                    {
+                        path: "/orders/:orderId",
+                        element: <OrderDetails />,
+                        loader: OrderDetailsLoader,
+                    },
+                ]
             },
             // {
             //     path: "/meeting/:meetId/confirm",

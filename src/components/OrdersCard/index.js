@@ -41,7 +41,7 @@ function OrdersCard({ order }) {
                     </div>
                     <div className='OrdersCard-amount-inner-div'>
                         Payment 
-                        <h5 className={'OrdersCard-text-date '+(!!orderObj.order_type ? '' : 'text-warning')}>{!!orderObj.order_type ? orderObj.order_type : "NOT YET"}</h5>
+                        <h5 className={'OrdersCard-text-date '+(!!orderObj.payment_method ? '' : 'text-warning')}>{!!orderObj.payment_method ? orderObj.payment_method : "NOT YET"}</h5>
                     </div>
                     <div className='OrdersCard-amount-inner-div'>
                         Delivered 
