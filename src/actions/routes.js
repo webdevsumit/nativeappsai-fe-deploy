@@ -9,6 +9,7 @@ import { loader as authLoader } from "../components/Auth";
 import { loader as SignupLoader } from './../pages/Signup';
 import { loader as OrderDetailsLoader } from './../pages/OrderDetails';
 import { loader as SignoutLoader } from './../components/SignOut';
+import { loader as AccountLoader } from './../pages/Account';
 // import { loader as AppConfirmPageLoader } from "../pages/AppConfirmPage";
 import EditProduct, { loader as editProductLoader } from "../pages/EditProduct";
 import Landing from "./../pages/Landing"
@@ -26,6 +27,7 @@ import Products from "../pages/Products";
 import AddNewProduct from "../pages/AddNewProduct";
 import SignupAddStoreDetails from "../pages/SignupAddStoreDetails";
 import Orders from "../pages/Orders";
+import Account from "../pages/Account";
 
 export const router = createBrowserRouter([
     {
@@ -74,6 +76,17 @@ export const router = createBrowserRouter([
                         element: <OrderDetails />,
                         loader: OrderDetailsLoader,
                     },
+                ]
+            },
+            {
+                path: "/account",
+                element: <Outlet />,
+                children: [
+                    {
+                        path: "/account",
+                        element: <Account />,
+                        loader: AccountLoader,
+                    }
                 ]
             },
             // {

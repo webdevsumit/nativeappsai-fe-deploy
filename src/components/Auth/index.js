@@ -22,6 +22,10 @@ export async function loader() {
     await checkStoreOwnerAuthAPI().then((res) => {
         if(res.data.status === 'success'){
             isAuthenticated = true;
+            let store_theme_color = res.data.store_theme_color;
+            if(!!store_theme_color){
+                localStorage.setItem("user_theme_color", store_theme_color);
+            }
         }else toast.error(res.data.message);
     }).catch(err => toast.error(err.message));
     

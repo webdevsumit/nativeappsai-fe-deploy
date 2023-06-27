@@ -1,0 +1,155 @@
+.Account {
+  padding: 20px;
+}
+
+.Account-store-id-input-text {
+  display: flex;
+  align-items: center;
+}
+
+.Account-store-id-input-text > p {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.Account-store-id-input-text1 {
+  width: fit-content;
+  font-weight: bold;
+}
+
+.Account-question-mark {
+  background-color: green;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-left: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.Account-store-id-input-p {
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  background-color: rgb(226, 226, 226);
+  padding: 5px;
+  border-radius: 3px;
+}
+
+#Account-store-id-input {
+  margin-left: 2px;
+  width: 130px;
+}
+
+.Account-help-text {
+  background-color: rgb(249, 241, 214);
+  padding: 10px;
+  font-family: monospace;
+}
+
+.Account-input-div {
+  margin-top: 10px;
+  max-width: 100%;
+}
+
+.Account-input-label {
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 3px;
+  color: var(--user-primary);
+}
+
+#Account-store-name-input {
+  width: 100%;
+  /* height: 40px; */
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.Account-unique-id-message {
+  margin-top: 1px;
+  font-weight: 500;
+}
+
+#Account-store-logo-input {
+  display: none;
+}
+
+.Create-store-file-input-label {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.Create-store-file-input-preview {
+  border: 2px dashed rgb(188, 188, 188);
+  padding: 5px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Create-store-file-input-preview > img {
+  border: 2px solid black;
+  width: 250px;
+  height: 250px;
+  max-width: 100%;
+}
+
+.Account-flex-inline {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+#Account-store-desc-input {
+  width: 100%;
+}
+
+.Account-store-color-input-label-div {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+#Account-store-color-input {
+  width: 100%;
+}
+
+.Account-storeTiming{
+  display: flex;
+}
+
+.Account-storeTiming>div{
+  flex: 1;
+  padding: 0 10px;
+}
+
+.Account-storeTiming>div>input{
+  width: 100%;
+  max-width: 120px;
+}
+
+.Account-payment-head{
+  color: var(--user-primary);
+}
+
+.Account-payment-address{
+  margin: 0;
+  opacity: 0.6;
+  font-style: italic;
+  margin-left: 10px;
+}
