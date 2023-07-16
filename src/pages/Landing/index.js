@@ -14,10 +14,10 @@ function Landing() {
         <div className='Landing'>
             <nav className='Landing-nav'>
                 <Link to='/landing' className=''>
-                    <h1 className='Landing-navHead'>ShopOnLive</h1>
+                    <h1 className='Landing-navHead'>Native Apps AI</h1>
                 </Link>
                 <div className='Landing-navlinks'>
-                    <a href='#landing-services' className='Landing-navlinks-to-hide'>
+                    <a href='#landing-pricing' className='Landing-navlinks-to-hide'>
                         <p className='Landing-navLink'>Services</p>
                     </a>
                     <a href='#landing-pricing' className='Landing-navlinks-to-hide'>
@@ -39,21 +39,21 @@ function Landing() {
                     <div className='Landing-firstDiv'>
                         <img className='Landing-hero-image' src='/assets/pngs/shoponlive-hero.png' alt='hero' />
                         <div className='Landing-hero-div'>
-                            <h1>Everything Everywhere All at Once</h1>
-                            <h3>Your Shop on Video Call Shopping App.</h3>
-                            <h3>Your products on ShopOnLive eccomerce.</h3>
-                            <h3>You own Shopping Mobile App.</h3>
-                            <h3>Integration amongst them.</h3>
+                            <h1>An AI Tool To Generate Native Apps.</h1>
+                            <h3>Get the app in just just 30 minutes.</h3>
+                            <h3>All kind of customizations are available.</h3>
+                            <h3>Payment Integrations are available.</h3>
                         </div>
                     </div>
                 </section>
-                <section id='landing-services'>
+                {/* <section id='landing-services'>
                     <div className='Landing-services'>
-                        <h1>Services</h1>
+                        <h1>Services and Pricing</h1>
                         <div className='Landing-services-div'>
                             <div className='Landing-services-div-card'>
-                                <h3>Video Call Shopping</h3>
-                                <p>People can Schedule Google Meet and do video call to you through our app "ShopOnLive" and can buy products on video call directly from their home. You just need to deliver the products. (Soon we will also do that for you.)</p>
+                                <h3>E-commerce</h3>
+                                <p>If you are just starting your business then it is for you.</p>
+                                <p>Simple .</p>
                             </div>
                             <div className='Landing-services-div-card'>
                                 <h3>Products On Eccomerce</h3>
@@ -66,40 +66,52 @@ function Landing() {
                         </div>
                         <p className='Landing-services-div-card-note'>Everything will be integrated to each other that mean people can also schedule meeting with you through you own app or through the eccomerce platform.</p>
                     </div>
-                </section>
+                </section> */}
                 <section id='landing-pricing'>
                     <div className='Landing-services'>
-                        <h1>Pricing</h1>
+                        <h1>Services & Pricing</h1>
                         <div className='Landing-services-div'>
                             <div className='Landing-services-div-card Landing-pricing-div-card' style={{backgroundColor: '#27d6f579', border: 'none'}}>
-                                <h3>Basic</h3>
-                                <div className='Landing-services-div-card-inner'>
-                                    <h5>Video Calling App.</h5>
-                                    <h5>No - Product on Eccomerce.</h5>
-                                    <h5>No - Your own mobile app.</h5>
-                                </div>
-                                <h4>Rs. 99 (Free For Now)</h4>
-                                <p onClick={()=>window.location.href="https://play.google.com/store/apps/details?id=com.shoponlive&pli=1"} className='user-submit-button1-light'>Download The App</p>
-                            </div>
+                                <h3>Starter</h3>
+                                <ul className='Landing-services-div-card-inner'>
+                                    <li> Best for initial stage businesses.</li>
+                                    <li> Get your own Mobile App in less price than your jeans.</li>
+                                    <li> Manage your customers with our beautiful Dashboard.</li>
+                                    <li> Start with us without losing your previous customer data.</li>
+                                    <li> Replace your existing app with new one.</li>
+                                    <li> Your customer will have this app as an update.</li>
+                                    <li> Payment Integration will already be there.</li>
+                                    <li> Don't worry we are always there to listen you. Just contact customer care.</li>
+                                    <li> Export all the data whenever you want.</li>
+                                    <li> Cancel the plan anytime without losing the data.</li>
+                                    <li> If you just want to sell something, then this plan is best for you to have your own E-Commerce Mobile app.</li>
+                                </ul>
+                                <p onClick={()=>window.location.href="https://wa.me/917999004229"} className='user-submit-button1-light'>Say Hi! To Get A Demo</p>                            </div>
                             <div className='Landing-services-div-card Landing-pricing-div-card-center Landing-pricing-div-card' style={{border: 'none'}}>
                                 <h3>Essential</h3>
-                                <div className='Landing-services-div-card-inner'>
-                                    <h5>Video Calling App.</h5>
-                                    <h5>Products on Eccomerce.</h5>
-                                    <h5>No - Your own mobile app.</h5>
-                                </div>
-                                <h4>Rs. 499</h4>
-                                <p onClick={()=>window.location.href="https://wa.me/917999004229"} className='user-submit-button1-light'>KNOW MORE</p>
+                                <ul className='Landing-services-div-card-inner'>
+                                    <li> Generate a real native mobile app.</li>
+                                    <li> Just tell which kind of app you want.</li>
+                                    <li> Choose from examples or create one your own design.</li>
+                                    <li> Just tell in the chat and get the app in just in 30 minutes.</li>
+                                    <li> You can download .app, .aab, etc files.</li>
+                                    <li> Download React Native Project to customize manually.</li>
+                                    <li> Payment Integration and much more.</li>
+                                    <li> We are always there to listen you. Just contact us.</li>
+                                    <li> Build your own Backend or use ours.</li>
+                                    <li> Cancel the plan anytime without losing the data.</li>
+                                    <li> If you don't like others disigns and want to make one your own then you can do that here.</li>
+                                </ul>
+                                <p onClick={()=>window.location.href="https://wa.me/917999004229"} className='user-submit-button1-light'>Say Hi! To Get A Demo</p>
                             </div>
                             <div className='Landing-services-div-card Landing-pricing-div-card' style={{backgroundColor: '#411bfb8e', border: 'none'}}>
                                 <h3>Premium</h3>
-                                <div className='Landing-services-div-card-inner'>
-                                    <h5>Video Calling App.</h5>
-                                    <h5>Products on Eccomerce.</h5>
-                                    <h5>Your own mobile app.</h5>
-                                </div>
-                                <h4>Rs. 999</h4>
-                                <p onClick={()=>window.location.href="/signup/premium"} className='user-submit-button1-light'>SELECT</p>
+                                <ul className='Landing-services-div-card-inner'>
+                                    <li> We are planing to provide 3D apps.</li>
+                                    <li> Contact us to know more.</li>
+                                    <li> You can give us suggestions or tell your demand for that.</li>
+                                </ul>
+                                <p onClick={()=>window.location.href="https://wa.me/917999004229"} className='user-submit-button1-light'>Say Hi! To Get A Demo</p>
                             </div>
                         </div>
                     </div>

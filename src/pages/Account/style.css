@@ -103,7 +103,8 @@
 .Create-store-file-input-preview > img {
   border: 2px solid black;
   width: 250px;
-  height: 250px;
+  /* height: 250px; */
+  height: auto;
   max-width: 100%;
 }
 

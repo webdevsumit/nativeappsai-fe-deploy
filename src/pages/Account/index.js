@@ -217,6 +217,7 @@ function Account() {
 			await updateStoreAccountDetailsApi(formData).then(res => {
 				if (res.data.status === 'success') {
 					toast.success(res.data.message);
+					localStorage.setItem("user_theme_color", storeThemeColor);
 				}
 				else {
 					toast.error(res.data.error);

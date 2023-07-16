@@ -28,6 +28,7 @@ import AddNewProduct from "../pages/AddNewProduct";
 import SignupAddStoreDetails from "../pages/SignupAddStoreDetails";
 import Orders from "../pages/Orders";
 import Account from "../pages/Account";
+import UserMenu from "../components/UserMenu";
 
 export const router = createBrowserRouter([
     {
@@ -94,6 +95,18 @@ export const router = createBrowserRouter([
             //     element: <AppConfirmPage />,
             //     loader: AppConfirmPageLoader
             // },
+            {
+                path: "/menu",
+                element: <UserMenu />,
+            },
+            {
+                path: "/yourPrivaryPolicy",
+                element: <UserMenu />,
+            },
+            {
+                path: "/yourTermsAndConditions",
+                element: <UserMenu />,
+            },
         ]
     },
     {
