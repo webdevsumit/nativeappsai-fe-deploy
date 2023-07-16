@@ -100,7 +100,7 @@ function Landing() {
                                     <li> We are always there to listen you. Just contact us.</li>
                                     <li> Build your own Backend or use ours.</li>
                                     <li> Cancel the plan anytime without losing the data.</li>
-                                    <li> If you don't like others disigns and want to make one your own then you can do that here.</li>
+                                    <li> If you don't like other's disign and want to make one your own then you can do that here.</li>
                                 </ul>
                                 <p onClick={()=>window.location.href="https://wa.me/917999004229"} className='user-submit-button1-light'>Say Hi! To Get A Demo</p>
                             </div>
