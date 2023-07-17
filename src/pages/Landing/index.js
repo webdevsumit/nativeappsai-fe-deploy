@@ -120,7 +120,7 @@ function Landing() {
                     <div className='Landing-services landing-contacts'>
                         <h1>Contacts & Info</h1>
                         <div className='Landing-services-div Landing-contacts-div'>
-                            <a target='blank' href='mailto:sumit@shoponlive.in'>sumit@shoponlive.in</a>
+                            <a target='blank' href='mailto:sumit@shoponlive.in'>sumit@nativeappsai.com</a>
                             <a target='blank' href='tel:917999004229'>+91 7999004229</a>
                             <a target='blank' href='https://wa.me/917999004229'>Chat on Whatsapp</a>
                             <Link to="/privacyPolicy">Privacy Policy</Link>

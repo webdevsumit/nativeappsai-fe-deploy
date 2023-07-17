@@ -4,23 +4,23 @@ import "./style.css";
 function SLFContainer2() {
     return (
         <div className='SLFContainer2-container2'>
-            <h1 className='SLFContainer2-container2-head' >ShopOnLive</h1>
-            <h4 className='SLFContainer2-container2-main-text'>Simple But Some Most Effective Tips</h4>
+            <h1 className='SLFContainer2-container2-head' >Native Apps AI</h1>
+            <h4 className='SLFContainer2-container2-main-text'>What is coming in the next update.</h4>
             <ul className='SLFContainer2-container2-buller-points'>
                 <li>
-                    People search with shop names, items, addresses or with problems.
+                    Better Dashboard with more knowledgeful statistics.
                 </li>
                 <li>
-                    Fill the Shop name and the Shop Description carefully.
+                    Data exporter to export your data in CSV file.
                 </li>
                 <li>
-                    Include all the items and addresses in the description to get into peaople's search results.
+                    Dater importer with CSV files. Import your old data here.
                 </li>
                 <li>
-                    Do not put something invalid like wrong address, Item which is not available or just clickable words.
+                    Customizations menu with more options in the App.
                 </li>
                 <li>
-                    People can also give you low ratings and we are encouraging people to do that in case of getting something invalid.
+                    Whatsapp or SMS sender with in just one click.
                 </li>
             </ul>
         </div>

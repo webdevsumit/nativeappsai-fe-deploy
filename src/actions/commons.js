@@ -13,6 +13,8 @@ export const truncSentence = (sentence, truncNum = 24) => {
     return sentence.length > (truncNum + 2) ? sentence.substr(0, truncNum) + '...' : sentence;
 }
 
+export const currencyConverter = (text) => (text);
+
 export const hasValidCharacters = (value) => {
     if (!value) return "";
     value = value.replace(/["]+/g, '')

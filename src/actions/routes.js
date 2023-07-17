@@ -10,6 +10,7 @@ import { loader as SignupLoader } from './../pages/Signup';
 import { loader as OrderDetailsLoader } from './../pages/OrderDetails';
 import { loader as SignoutLoader } from './../components/SignOut';
 import { loader as AccountLoader } from './../pages/Account';
+import { loader as StoreDashboardLoader } from './../pages/StoreDashboard';
 // import { loader as AppConfirmPageLoader } from "../pages/AppConfirmPage";
 import EditProduct, { loader as editProductLoader } from "../pages/EditProduct";
 import Landing from "./../pages/Landing"
@@ -29,6 +30,9 @@ import SignupAddStoreDetails from "../pages/SignupAddStoreDetails";
 import Orders from "../pages/Orders";
 import Account from "../pages/Account";
 import UserMenu from "../components/UserMenu";
+import StoreDashboard from "../pages/StoreDashboard";
+import AppSettings from "../pages/AppSettings";
+import AppGenerator from "../pages/AppGenerator";
 
 export const router = createBrowserRouter([
     {
@@ -40,6 +44,19 @@ export const router = createBrowserRouter([
             {
                 path: "/",
                 element: <p></p>,
+            },
+            {
+                path: "/dashboard",
+                element: <StoreDashboard />,
+                loader: StoreDashboardLoader,
+            },
+            {
+                path: "/app-settings",
+                element: <AppSettings />,
+            },
+            {
+                path: "/app-generator",
+                element: <AppGenerator />,
             },
             {
                 path: "/products",
@@ -62,7 +79,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/customer-service",
-                element: <h1 style={{textAlign: 'center'}}>Whatsapp on +91 7999004229</h1>,
+                element: <h3 style={{textAlign: 'center'}}><a target='blank' href='https://wa.me/917999004229'>Chat on Whatsapp</a></h3>,
             },
             {
                 path: "/orders",

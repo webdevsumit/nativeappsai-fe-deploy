@@ -9,7 +9,7 @@ function ShopOnLiveTopBar({
 	return (
 		<div className='ShopOnLiveTopBar' style={{ backgroundColor: bgColor }}>
 			{/* <img className='ShopOnLiveTopBar-logo' src='/assets/svgs/logo.svg' alt='logo' /> */}
-			<h1 className='ShopOnLiveTopBar-logo'>ShopOnLive</h1>
+			<h1 className='ShopOnLiveTopBar-logo'>Native Apps AI</h1>
 		</div>
 	)
 }

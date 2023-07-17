@@ -27,11 +27,11 @@ function PricacyPolicy() {
                     other securities entitled to vote for election of directors or other managing authority.</p>
             </li>
             <li>
-                <p><strong>Application</strong> refers to ShopOnLive, the software program provided by the Company.</p>
+                <p><strong>Application</strong> refers to Native Apps AI, the software program provided by the Company.</p>
             </li>
             <li>
                 <p><strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot;
-                    or &quot;Our&quot; in this Agreement) refers to ShopOnLive.</p>
+                    or &quot;Our&quot; in this Agreement) refers to Native Apps AI.</p>
             </li>
             <li>
                 <p><strong>Country</strong> refers to: Madhya Pradesh, India</p>
@@ -254,7 +254,7 @@ function PricacyPolicy() {
         <p>If you have any questions about this Privacy Policy, You can contact us:</p>
         <ul>
             <li>
-                <p>By email: sumit@shoponlive.in</p>
+                <p>By email: sumit@shoponlive.in or sumit@nativeappsai.com</p>
             </li>
             <li>
                 <p>By phone number: +91 7999004229</p>
