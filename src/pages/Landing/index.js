@@ -42,7 +42,6 @@ function Landing() {
                             <h1>An AI Tool To Generate Native Apps.</h1>
                             <h3>Get the app in just just 30 minutes.</h3>
                             <h3>All kind of customizations are available.</h3>
-                            <h3>Payment Integrations are available.</h3>
                         </div>
                     </div>
                 </section>
@@ -72,45 +71,55 @@ function Landing() {
                         <h1>Services & Pricing</h1>
                         <div className='Landing-services-div'>
                             <div className='Landing-services-div-card Landing-pricing-div-card' style={{backgroundColor: '#27d6f579', border: 'none'}}>
-                                <h3>Starter</h3>
-                                <ul className='Landing-services-div-card-inner'>
-                                    <li> Best for initial stage businesses.</li>
-                                    <li> Get your own Mobile App in less price than your jeans.</li>
-                                    <li> Manage your customers with our beautiful Dashboard.</li>
-                                    <li> Start with us without losing your previous customer data.</li>
-                                    <li> Replace your existing app with new one.</li>
-                                    <li> Your customer will have this app as an update.</li>
-                                    <li> Payment Integration will already be there.</li>
-                                    <li> Don't worry we are always there to listen you. Just contact customer care.</li>
-                                    <li> Export all the data whenever you want.</li>
-                                    <li> Cancel the plan anytime without losing the data.</li>
-                                    <li> If you just want to sell something, then this plan is best for you to have your own E-Commerce Mobile app.</li>
-                                </ul>
-                                <p onClick={()=>window.location.href="https://wa.me/917999004229"} className='user-submit-button1-light'>Say Hi! To Get A Demo</p>                            </div>
+                                <div className='Landing-services-div-card-inner-div'>
+                                    <h3>Starter</h3>
+                                    <ul className='Landing-services-div-card-inner'>
+                                        <li> Best for initial stage businesses.</li>
+                                        <li> Get your own Mobile App in less price than your jeans.</li>
+                                        <li> Manage your customers with our Dashboard.</li>
+                                        <li> Replace your existing app with new one.</li>
+                                        <li> Payment Integration will already be there.</li>
+                                        <li> Don't worry we are always there to listen you. Just contact customer care.</li>
+                                        <li> Export all the data whenever you want.</li>
+                                        <li> Cancel the plan anytime without losing the data.</li>
+                                        <li> If you just want to sell something, then this plan is best for you to have your own E-Commerce Mobile app.</li>
+                                    </ul>
+                                </div>
+                                <p onClick={()=>window.location.href="https://wa.me/917999004229"} className='user-submit-button1-light'>Say Hi! To Get A Demo</p>
+                            </div>
                             <div className='Landing-services-div-card Landing-pricing-div-card-center Landing-pricing-div-card' style={{border: 'none'}}>
-                                <h3>Essential</h3>
-                                <ul className='Landing-services-div-card-inner'>
-                                    <li> Generate a real native mobile app.</li>
-                                    <li> Just tell which kind of app you want.</li>
-                                    <li> Choose from examples or create one your own design.</li>
-                                    <li> Just tell in the chat and get the app in just in 30 minutes.</li>
-                                    <li> You can download .app, .aab, etc files.</li>
-                                    <li> Download React Native Project to customize manually.</li>
-                                    <li> Payment Integration and much more.</li>
-                                    <li> We are always there to listen you. Just contact us.</li>
-                                    <li> Build your own Backend or use ours.</li>
-                                    <li> Cancel the plan anytime without losing the data.</li>
-                                    <li> If you don't like other's disign and want to make one your own then you can do that here.</li>
-                                </ul>
+                                <div className='Landing-services-div-card-inner-div'>
+                                    <h3>Premium</h3>
+                                    <ul className='Landing-services-div-card-inner'>
+                                        <li> Generate a real native mobile app.</li>
+                                        <li> Just tell which kind of app you want.</li>
+                                        <li> Choose from examples or create one your own design.</li>
+                                        <li> You can have app in less than 30 minutes.</li>
+                                        <li> You can download .app, .aab, etc files.</li>
+                                        <li> Download React Native Project to customize manually.</li>
+                                        <li> Payment Integration and much more.</li>
+                                        <li> We are always there to listen you. Just contact us.</li>
+                                        <li> Build your own Backend or use ours.</li>
+                                        <li> Cancel the plan anytime without losing the data.</li>
+                                    </ul>
+                                </div>
                                 <p onClick={()=>window.location.href="https://wa.me/917999004229"} className='user-submit-button1-light'>Say Hi! To Get A Demo</p>
                             </div>
                             <div className='Landing-services-div-card Landing-pricing-div-card' style={{backgroundColor: '#411bfb8e', border: 'none'}}>
-                                <h3>Premium</h3>
-                                <ul className='Landing-services-div-card-inner'>
-                                    <li> We are planing to provide 3D apps.</li>
-                                    <li> Contact us to know more.</li>
-                                    <li> You can give us suggestions or tell your demand for that.</li>
-                                </ul>
+                                <div className='Landing-services-div-card-inner-div'>
+                                    <h3>Pricing Overview</h3>
+                                    <ul className='Landing-services-div-card-inner'>
+                                        <li> For starter plan, Pricing depends on your number of users</li>
+                                        <li> For starter plan, It is totally free for less than 30 users.</li>
+                                        <li> For starter plan, Generating app in the begining has one time cost which is totally free for now.</li>
+                                        <li> </li>
+                                        <li> For premium plan, Pricing depends on your number of users</li>
+                                        <li> For premium plan, It is also totally free for less than 30 users.</li>
+                                        <li> For premium plan, Generating app has ₹ 1,999 cost per generation.</li>
+                                        <li> </li>
+                                        <li> Contact to know more about plans and services. Trust me, you will find this a best option for your business.</li>
+                                    </ul>
+                                </div>
                                 <p onClick={()=>window.location.href="https://wa.me/917999004229"} className='user-submit-button1-light'>Say Hi! To Get A Demo</p>
                             </div>
                         </div>

@@ -13,30 +13,25 @@ export const loader = async ({ params }) => {
     return { 'planType': params.planType };
 }
 
-
 function Signup() {
 
-	const [username, setUsername] = useState("");
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [phone, setPhone] = useState("");
-	const [zipcode, setZipcode] = useState("");
 	const { planType } = useLoaderData();
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
 
 	const doSignup = async () => {
-		if(!username || !email || !password || !phone){
+		if(!email || !password || !phone){
 			toast.error("All fields are required");
 			return;
 		}
 
 		let payloads = {
-			username: username.toLowerCase(),
 			email: email.toLowerCase(),
 			phone,
 			password,
-			zipcode: zipcode.trim(),
 			planType,
 		}
 
@@ -44,7 +39,7 @@ function Signup() {
 			dispatch(setIsLoading(true));
 			if(res.data.status === "success"){
 				localStorage.setItem('token', res.data.token);
-				navigate(`/signup/${planType}/store`);
+				navigate(`/account`);
 			}else{
 				toast.error(res.data.message);
 			}
@@ -58,11 +53,6 @@ function Signup() {
 			setPhone(tempVal.trim())
 	}
 
-	const handleUsernameChange = (event) => {
-		let tempVal = event.target.value;
-		setUsername(tempVal.trim().toLowerCase().replace(/ /g,"_"))
-	}
-
 	const handleEmailChange = (event) => {
 		let tempVal = event.target.value;
 		setEmail(tempVal.trim().toLowerCase().replace(/ /g,"_"))
@@ -73,13 +63,6 @@ function Signup() {
 			<div className='Signup-main'>
 				<div className='Signup-container1'>
 					
-						<NormalInput 
-							placeholder="Create Username"
-							type='text'
-							value={username}
-							onChange={handleUsernameChange}
-							classNames="Signup-input-box-length"
-						/>
 						<NormalInput 
 							placeholder="Your email address"
 							type='email'
@@ -96,15 +79,6 @@ function Signup() {
 						/>
 
 						<NormalInput 
-							placeholder="Zipcode"
-							value={zipcode}
-							onChange={e=>setZipcode(e.target.value)}
-							classNames="Signup-input-box-length"
-							type='text'
-							max={6}
-						/>
-
-						<NormalInput 
 							placeholder="Contact Number"
 							value={phone}
 							onChange={changeWhatsappNumber}
@@ -116,7 +90,6 @@ function Signup() {
 						<p className='user-submit-button1-dark' onClick={doSignup}>CREATE ACCOUNT</p>
 
 						<h5 className='Login-login-button'>Already have an account? <Link to='/login'>Login</Link></h5>
-						<h5 className='Login-login-button2'>Already have a customer account? <Link to='/create-store'>Create Store</Link></h5>
 						<h5 className='Login-login-button2'><Link to='/termsAndConditions'>Terms and Conditions</Link></h5>
 
 				</div>

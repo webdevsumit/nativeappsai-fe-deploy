@@ -33,6 +33,7 @@ function Account() {
 	const [storeDescError, setStoreDescError] = useState(false);
 	const [storeThemeColor, setStoreThemeColor] = useState(data.store_theme_color);
 	const [storeThemeColorHelpText, setStoreThemeColorHelpText] = useState(false);
+	const [isSaving, setIsSaving] = useState(false);
 	const [addresses, setAddresses] = useState(data.store_addresses.map(add => {
 		return {
 			'id': add.id,
@@ -86,6 +87,9 @@ function Account() {
 	}
 
 	const onSubmit = async () => {
+		if(isSaving){
+			return;
+		}
 
 		let hasErrors = false;
 
@@ -214,6 +218,7 @@ function Account() {
 			// formData.append('bank_type', bank_type);
 			// formData.append('bank_cc', bank_cc);
 
+			setIsSaving(true);
 			await updateStoreAccountDetailsApi(formData).then(res => {
 				if (res.data.status === 'success') {
 					toast.success(res.data.message);
@@ -223,6 +228,7 @@ function Account() {
 					toast.error(res.data.error);
 				}
 			}).catch(err => toast.error(err.message));
+			setIsSaving(false);
 		}
 	}
 
@@ -491,7 +497,7 @@ function Account() {
 				<button
 					className='user-submit-button1-dark w-100'
 					onClick={onSubmit}
-				>SAVE</button>
+				>{isSaving?'SAVING...':'SAVE'}</button>
 			</div>
 		</div>
 	)

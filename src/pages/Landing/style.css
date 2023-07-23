@@ -94,13 +94,20 @@
   min-height: 200px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: space-between;
+  align-content: flex-start;
   border: 1px solid rgba(0, 0, 0, 0);
   padding: 20px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin-bottom: 15px;
+}
+
+.Landing-services-div-card-inner-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .Landing-services-div-card-note{
