@@ -10,19 +10,19 @@ import { setIsLoading } from './../../redux/navbar';
 
 function Login() {
 
-	const [username, setUsername] = useState("");
+	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 
 	const doLogin = async () => {
-		if(!username || !password){
+		if(!email || !password){
 			toast.error("All fields are required.");
 			return;
 		}
 
 		let payloads = {
-			username :username.toLowerCase().replace(/ /g,"_"),
+			email :email.toLowerCase().replace(/ /g,"_"),
 			password
 		}
 
@@ -42,9 +42,9 @@ function Login() {
 		dispatch(setIsLoading(false));
 	}
 
-	const handleUserNameChange = (event) => {
+	const handleemailChange = (event) => {
 		let tempVal = event.target.value;
-		setUsername(tempVal.trim().toLowerCase().replace(/ /g,"_"))
+		setEmail(tempVal.trim().toLowerCase().replace(/ /g,"_"))
 	}
 
 	return (
@@ -53,10 +53,10 @@ function Login() {
 				<div className='Login-container1'>
 
 					<NormalInput 
-						placeholder="Enter Username"
+						placeholder="Enter email"
 						type='text'
-						value={username}
-						onChange={handleUserNameChange}
+						value={email}
+						onChange={handleemailChange}
 						classNames="Login-input-box-length"
 					/>
 					<NormalInput 
