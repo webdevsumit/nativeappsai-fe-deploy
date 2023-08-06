@@ -267,7 +267,7 @@ function Account() {
 				{!!storeNameError && <p className='Account-unique-id-message text-danger'>{storeNameError}</p>}
 			</div>
 
-			<div className='Account-input-div'>
+			<div className='Account-input-div' >
 				<h4 className='Account-input-label Account-flex-inline'>Logo <p className='Account-question-mark' onClick={() => setStoreLogoHelpText(!storeLogoHelpText)}>?</p> </h4>
 				{storeLogoHelpText && <p className='Account-help-text'>
 					Please select an image of type png or jpeg. Size should be less than 500kb and It is going to be shown to your customers on the app.
@@ -287,6 +287,7 @@ function Account() {
 					{(!!storeLogo || !!data.store_logo) ? <img
 						src={!!storeLogo ? URL.createObjectURL(storeLogo) : data.store_logo}
 						alt="logo"
+						style={{backgroundColor: "var(--user-primary)"}}
 					/> : <p>
 						There is some issue with the image. Please fix.
 					</p>}
