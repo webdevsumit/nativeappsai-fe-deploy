@@ -12,7 +12,7 @@ function OrderDetailsProductCard({ product, onStore=false }) {
             <div className='OrderDetailsProductCard-desc'>
                 <p>{productName}</p>
                 <div className='OrderDetailsProductCard-more-btn-div'>
-                    <Link className='OrderDetailsProductCard-more-btn' to={`/products/edit${product_id}/`}>know more</Link>
+                    <Link className='OrderDetailsProductCard-more-btn' to={`/products/edit/${product_id}/`}>know more</Link>
                 </div>
             </div>
             <div className='OrderDetailsProductCard-details-price-div'>

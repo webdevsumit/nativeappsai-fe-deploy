@@ -366,3 +366,21 @@ export async function updateStoreAccountDetailsApi(payloads) {
             .catch(err => onReject(err));
     });
 }
+
+export async function onSaveRazorpayCredentialsApi(payloads) {
+    return await new Promise(async (onResolve, onReject) => {
+        await axios.post(
+            `${baseUrl}onSaveRazorpayCredentials/`,
+            payloads,
+            {
+                headers: {
+                    'Content-Type': "multipart/form-data",
+                    'Accept': "application/json",
+                    'Authorization': `Token ${localStorage.getItem("token")}`
+                }
+            }
+        )
+            .then(res => onResolve(res))
+            .catch(err => onReject(err));
+    });
+}
