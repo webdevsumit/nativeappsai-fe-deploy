@@ -12,6 +12,7 @@ function AddNewProduct() {
     const [name, setName] = useState("");
     const [description, setDescription] = useState("");
     const [priceInPaisa, setPriceInPaisa] = useState("");
+    const [promotionalPriceInPaisa, setPromotionalPriceInPaisa] = useState("");
     const [quantity, setQuantity] = useState("");
 
     const onSaveChanges = async () => {
@@ -27,6 +28,10 @@ function AddNewProduct() {
             toast.error("Price is required.");
             return;
         }
+        if(!promotionalPriceInPaisa){
+            toast.error("Promotional Price is required.");
+            return;
+        }
         if(!quantity){
             toast.error("Quantity is required.");
             return;
@@ -35,6 +40,7 @@ function AddNewProduct() {
             name: name,
             description: description,
             priceInPaisa: priceInPaisa,
+            promotionalPriceInPaisa: promotionalPriceInPaisa,
             quantity: quantity,
         }
         await adddNewProductAPI(payloads).then(res=>{
@@ -79,7 +85,6 @@ function AddNewProduct() {
                 ></textarea>
             </div>
             <div>
-
                 <div className='AddNewProduct-inline-inputs'>
                     <div className='AddNewProduct-inline-inputs1'>
                         <label className='AddNewProduct-input-label'>
@@ -108,7 +113,23 @@ function AddNewProduct() {
                         />
                     </div>
                 </div>
-                <p className='AddNewProduct-note'>For Rs. 100 product put 10000 in the price box.</p>
+                <div className='AddNewProduct-inline-inputs'>
+                    <div className='AddNewProduct-inline-inputs1'>
+                        <label className='AddNewProduct-input-label'>
+                            Promo Price (in paisa)
+                        </label><br />
+                        <input
+                            className='AddNewProduct-number-input'
+                            name='promoPriceInPaisa'
+                            value={promotionalPriceInPaisa}
+                            type="number"
+                            placeholder="eg. 8000"
+                            onChange={e => setPromotionalPriceInPaisa(e.target.value)}
+                        />
+                    </div>
+                    
+                </div>
+                <p className='AddNewProduct-note'>Price will have a cross and promotional price will be the real price.</p>
             </div>
 
             <hr />

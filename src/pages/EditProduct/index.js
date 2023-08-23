@@ -26,16 +26,38 @@ function EditProduct(){
 
     const navigate = useNavigate()
 
-    const [name, setName] = useState(productDetails.name)
-    const [description, setDescription] = useState(productDetails.description)
-    const [priceInPaisa, setPriceInPaisa] = useState(productDetails.price_in_paisa)
-    const [quantity, setQuantity] = useState(productDetails.number_of_items)
+    const [name, setName] = useState(productDetails.name);
+    const [description, setDescription] = useState(productDetails.description);
+    const [priceInPaisa, setPriceInPaisa] = useState(productDetails.price_in_paisa);
+    const [promotionalPriceInPaisa, setPromotionalPriceInPaisa] = useState(productDetails.promo_price_in_paisa);
+    const [quantity, setQuantity] = useState(productDetails.quantity);
 
     const onClickEditButton = async () => {
+        if(!name){
+            toast.error("Name is required.");
+            return;
+        }
+        if(!description){
+            toast.error("Description is required.");
+            return;
+        }
+        if(!priceInPaisa){
+            toast.error("Price is required.");
+            return;
+        }
+        if(!promotionalPriceInPaisa){
+            toast.error("Promotional Price is required.");
+            return;
+        }
+        if(!quantity){
+            toast.error("Quantity is required.");
+            return;
+        }
         let payloads = {
             name: name,
             description: description,
             priceInPaisa: priceInPaisa,
+            promotionalPriceInPaisa: promotionalPriceInPaisa,
             quantity: quantity,
         }
         await updateProductByIdAPI(productId, payloads).then(res=>{
@@ -108,6 +130,22 @@ function EditProduct(){
                             onChange={e => setQuantity(e.target.value)}
                         />
                     </div>
+                </div>
+                <div className='AddNewProduct-inline-inputs'>
+                    <div className='AddNewProduct-inline-inputs1'>
+                        <label className='AddNewProduct-input-label'>
+                            Promo Price (in paisa)
+                        </label><br />
+                        <input
+                            className='AddNewProduct-number-input'
+                            name='promoPriceInPaisa'
+                            value={promotionalPriceInPaisa}
+                            type="number"
+                            placeholder="eg. 8000"
+                            onChange={e => setPromotionalPriceInPaisa(e.target.value)}
+                        />
+                    </div>
+                    
                 </div>
                 <p className='EditProduct-note'>For Rs. 100 product put 10000 in the price box.</p>
             </div>

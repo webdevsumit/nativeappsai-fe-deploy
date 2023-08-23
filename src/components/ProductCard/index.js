@@ -31,7 +31,7 @@ function ProductCard({ product, setShowPhotoGallery }) {
             <h2 className='ProductCard-name'>{product.name}</h2>
             <p className='ProductCard-description'>{showMore ? product.description.substring(0, 100) : product.description}</p>
             <div className='ProductCard-buttons'>
-                <p className='user-submit-button1-dark btn-danger' onClick={() => { }}><img className='ProductCard-btn-icon' src='assets/icons/pngs/deleteWhite.png' alt='DELETE' title='DELETE' /></p>
+                <p className='user-submit-button1-dark btn-danger' onClick={() => {toast.error("Currently, Product deletion is not allowed.") }}><img className='ProductCard-btn-icon' src='assets/icons/pngs/deleteWhite.png' alt='DELETE' title='DELETE' /></p>
                 <p className='user-submit-button1-dark' onClick={() => { setShowPhotoGallery(product.id) }}><img className='ProductCard-btn-icon' src='assets/icons/pngs/cameraWhite.png' alt='PHOTOS' title='PHOTOS' /></p>
                 <p className={`user-submit-button1-dark ${disabled?"btn-success":'btn-warning'}`} onClick={onClickDisable}><img className='ProductCard-btn-icon' src={disabled?"assets/icons/pngs/crossEyeWhite.png":'assets/icons/pngs/crossEyeWhite.png'} alt='PHOTOS' title='PHOTOS' /></p>
                 <p className='user-submit-button1-dark' onClick={onEditClick}>{editLoading? "....." : <img className='ProductCard-btn-icon' src='assets/icons/pngs/editWhite.png' alt='EDIT' title='EDIT' />}</p>
