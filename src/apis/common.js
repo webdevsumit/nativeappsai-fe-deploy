@@ -1,8 +1,8 @@
 import axios from "axios";
 // import moment from "moment";
 
-// const baseUrl = 'http://127.0.0.1:8000/v2/';
-const baseUrl = 'https://apis.getcustomer.live/v2/';
+const baseUrl = 'http://127.0.0.1:8000/v2/';
+// const baseUrl = 'https://apis.getcustomer.live/v2/';
 
 
 export async function checkStoreOwnerAuthAPI() {
@@ -372,6 +372,24 @@ export async function onSaveRazorpayCredentialsApi(payloads) {
         await axios.post(
             `${baseUrl}onSaveRazorpayCredentials/`,
             payloads,
+            {
+                headers: {
+                    'Content-Type': "multipart/form-data",
+                    'Accept': "application/json",
+                    'Authorization': `Token ${localStorage.getItem("token")}`
+                }
+            }
+        )
+            .then(res => onResolve(res))
+            .catch(err => onReject(err));
+    });
+}
+
+
+export async function disbaleToggleProductByIdApi(id) {
+    return await new Promise(async (onResolve, onReject) => {
+        await axios.get(
+            `${baseUrl}products_data/disbaleToggleProductById/${id}/`,
             {
                 headers: {
                     'Content-Type': "multipart/form-data",
