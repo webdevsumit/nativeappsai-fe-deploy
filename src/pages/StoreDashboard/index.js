@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, {  } from 'react';
 import { toast } from 'react-hot-toast';
 import { redirect, useLoaderData } from 'react-router-dom';
 import { getDashboardDataAPI } from '../../apis/common';
@@ -36,10 +36,7 @@ export const loader = async () => {
 function StoreDashboard() {
 
     const { data } = useLoaderData();
-
-    useEffect(()=>{
-        toast.error("We are still working on that.");
-    }, [])
+    const graphData = data.graphData.map(gData=>({...gData, "value": (gData.value/100)}))
 
     return (
         <div className='StoreDashboard'>
@@ -48,20 +45,20 @@ function StoreDashboard() {
                 <DashboardCard icon='/assets/icons/svgs/dashboard/eye.svg' value={data.totalRegisteredProducts} name="View/Day" />
             </div>
             <div className='StoreDashboard-inline'>
-                <DashboardCard icon='/assets/icons/svgs/dashboard/twoPeople.svg' value={455} name="Clients" />
-                <DashboardCard icon='/assets/icons/svgs/dashboard/heart-outline.svg' value={21} name={"liked Products"} />
+                <DashboardCard icon='/assets/icons/svgs/dashboard/twoPeople.svg' value={data.totalClients} name="Clients" />
+                <DashboardCard icon='/assets/icons/svgs/dashboard/heart-outline.svg' value={data.totalProductsLikes} name={"liked Products"} />
             </div>
             <div className='StoreDashboard-graph'>
                 <h5>Monthly Sales</h5>
-                <NormalLineChart formatedData={data.graphData} />
+                <NormalLineChart formatedData={graphData} />
             </div>
             {/* <div className='StoreDashboard-inline'>
                 <DashboardCard icon='/assets/icons/svgs/dashboard/cart.svg' value={data.incomeOfTheMonth} name="Monthly Sell" />
                 <DashboardCard icon='/assets/icons/svgs/dashboard/cart.svg' value={data.yesterdaysIncome} name="Yesterday's Sell" />
             </div> */}
             <div className='StoreDashboard-inline'>
-                <DashboardCard icon='/assets/icons/svgs/dashboard/money.svg' currentStoreCurrency={currentStoreCurrency} value={`${currencyConverter(150)}`} name="Today's Sell" />
-                <DashboardCard icon='/assets/icons/svgs/dashboard/moneyCheck.svg' currentStoreCurrency={currentStoreCurrency} value={`${currencyConverter(250)}`} name="Total Sell" />
+                <DashboardCard icon='/assets/icons/svgs/dashboard/money.svg' currentStoreCurrency={currentStoreCurrency} value={`${currencyConverter(data.salesPerDay/100)}`} name="Today's Sell" />
+                <DashboardCard icon='/assets/icons/svgs/dashboard/moneyCheck.svg' currentStoreCurrency={currentStoreCurrency} value={`${currencyConverter(data.totalSalesAmountInPaisa/100)}`} name="Total Sell" />
             </div>
         </div>
     )

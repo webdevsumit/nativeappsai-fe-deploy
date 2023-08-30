@@ -19,6 +19,7 @@ function ProductCard({ product, setShowPhotoGallery }) {
         await disbaleToggleProductByIdApi(product.id).then(res=>{
             if(res.data.status==="success"){
                 setDisabled(res.data.disabled)
+                toast.success(res.data.disabled?"Product will not be shown to users.":"Product is now visible to users.")
             }else{
                 toast.error(res.data.error)
             }

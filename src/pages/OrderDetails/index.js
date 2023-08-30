@@ -22,7 +22,8 @@ function OrderDetails() {
     let color = 'var(--user-primary)';
     const history = useNavigate();
     const { data } = useLoaderData();
-    const [is_delivered, set_is_delivered] = useState(data.is_delivered)
+    const [is_delivered, set_is_delivered] = useState(data.is_delivered);
+    const [payment_method, set_payment_method] = useState(data.payment_method)
 
     const setOrderDeliveredById = async () => {
         if(is_delivered){
@@ -37,6 +38,7 @@ function OrderDetails() {
             if(res.data.status === "success"){
                 toast.success(res.data.message);
                 set_is_delivered(true);
+                set_payment_method("DONE");
             }else toast.error(res.data.message);
         }).catch(err=>toast.error(err.message));
     }
@@ -67,7 +69,7 @@ function OrderDetails() {
             {data.products.map((product, index)=><OrderDetailsProductCard key={index} product={product} />)}
             <div className='OrderDetails-total-div-container'>
                 <p style={{color: `${color}`}}>Payment Method</p>
-                <p className={" "+(!!data.payment_method ? '' : 'text-warning')}>{!!data.payment_method ? data.payment_method : "NOT YET"}</p>
+                <p className={" "+(!!payment_method ? '' : 'text-warning')}>{!!payment_method ? payment_method : "NOT YET"}</p>
             </div>
             <div className='OrderDetails-total-div-container'>
                 <p style={{color: `${color}`}}>Subtotal</p>
