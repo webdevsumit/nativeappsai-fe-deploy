@@ -1,8 +1,8 @@
 import axios from "axios";
 // import moment from "moment";
 
-const baseUrl = 'http://127.0.0.1:8000/v2/';
-// const baseUrl = 'https://apis.getcustomer.live/v2/';
+// const baseUrl = 'http://127.0.0.1:8000/v2/';
+const baseUrl = 'https://apis.getcustomer.live/v2/';
 
 
 export async function checkStoreOwnerAuthAPI() {
