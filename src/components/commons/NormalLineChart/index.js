@@ -10,37 +10,24 @@ import { transition } from 'd3-transition';
 import XYAxis from './axis/xy-axis';
 
 let initData = [
-    { name: 'Jan', value: 30 },
-    { name: 'Feb', value: 10 },
-    { name: 'Mar', value: 50 },
-    { name: 'Apr', value: 20 },
-    { name: 'May', value: 80 },
-    { name: 'Jun', value: 30 },
-    { name: 'July', value: 0 },
-    { name: 'Aug', value: 20 },
-    { name: 'Sep', value: 100 },
-    { name: 'Oct', value: 55 },
-    { name: 'Nov', value: 60 },
-    { name: 'Dec', value: 80 },
+    { name: 'Jan', value: 0 },
+    { name: 'Feb', value: 0 },
+    { name: 'Mar', value: 0 },
+    { name: 'Apr', value: 0 },
+    { name: 'May', value: 0 },
+    { name: 'Jun', value: 0 },
+    { name: 'Jul', value: 0 },
+    { name: 'Aug', value: 0 },
+    { name: 'Sep', value: 0 },
+    { name: 'Oct', value: 0 },
+    { name: 'Nov', value: 0 },
+    { name: 'Dec', value: 0 },
 ]
 
 function NormalLineChart({ formatedData=null }) {
 
     const [data,] = useState(!!formatedData?formatedData:initData);
-
-    // const randomData = (e) => {
-    //     e.preventDefault();
-    //     setData((prevState) => {
-    //         const data = prevState.map(d => ({
-    //             name: d.name,
-    //             value: Math.floor((Math.random() * 100) + 1)
-    //         }))
-    //         return data;
-    //     })
-    // }
-
     const parentWidth = window.innerWidth<700? window.innerWidth : 700 ;
-
 
     const margins = {
         top: 20,
@@ -64,14 +51,16 @@ function NormalLineChart({ formatedData=null }) {
         .range([height, 0])
         .nice();
 
+    const bandWidth = xScale.bandwidth();
+    const xOffset = bandWidth / 2;
+
     const lineGenerator = line()
-        .x(d => xScale(d.name))
+        .x(d => xScale(d.name) + xOffset)
         .y(d => yScale(d.value))
         .curve(curveMonotoneX);
 
     return (
         <div className='NormalLineChart'>
-            {/* <button onClick={randomData}>Randomize data</button> */}
             <svg
                 className="lineChartSvg"
                 width={width + margins.left + margins.right}

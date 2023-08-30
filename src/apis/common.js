@@ -402,3 +402,20 @@ export async function disbaleToggleProductByIdApi(id) {
             .catch(err => onReject(err));
     });
 }
+
+export async function getDashboardDataAPI(id) {
+    return await new Promise(async (onResolve, onReject) => {
+        await axios.get(
+            `${baseUrl}getDashboardData/`,
+            {
+                headers: {
+                    'Content-Type': "multipart/form-data",
+                    'Accept': "application/json",
+                    'Authorization': `Token ${localStorage.getItem("token")}`
+                }
+            }
+        )
+            .then(res => onResolve(res))
+            .catch(err => onReject(err));
+    });
+}
