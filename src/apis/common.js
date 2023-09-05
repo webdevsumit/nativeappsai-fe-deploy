@@ -386,6 +386,26 @@ export async function onSaveRazorpayCredentialsApi(payloads) {
 }
 
 
+
+export async function onSaveMailCredentialsApi(payloads) {
+    return await new Promise(async (onResolve, onReject) => {
+        await axios.post(
+            `${baseUrl}onSaveMailCredentials/`,
+            payloads,
+            {
+                headers: {
+                    'Content-Type': "multipart/form-data",
+                    'Accept': "application/json",
+                    'Authorization': `Token ${localStorage.getItem("token")}`
+                }
+            }
+        )
+            .then(res => onResolve(res))
+            .catch(err => onReject(err));
+    });
+}
+
+
 export async function disbaleToggleProductByIdApi(id) {
     return await new Promise(async (onResolve, onReject) => {
         await axios.get(

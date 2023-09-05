@@ -15,7 +15,16 @@
     padding: 10px;
     font-family: monospace;
     margin: 0px 10px;
-  }
+}
+
+.AppSettings-input-div-linline{
+  display: flex;
+}
+
+.AppSettings-input-div-info>a{
+  font-family: Arial;
+  font-size: 12px;
+}
 
 .AppSettings-inputs {
   width: 100%;
